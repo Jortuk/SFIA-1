@@ -5,4 +5,13 @@ Following the QAC Fundamental Project Specification (DevOps Core) due for 23rd M
 [Brief](#Brief)
 
 ## Brief
-Design a Create Read Update and Delete (CRUD) application utilising tools, methodologies, and technologies that illustrate all core modules covered during training. 
+Design a Create Read Update and Delete (CRUD) application utilising tools, methodologies, and technologies that illustrate all core modules covered during training.
+
+The requirements are, however not limited too:
+- Trello Board (or Kanban equivalent).
+- A relational MySQL database created on Google Cloud Platform (GCP) - displayed with an Entity Relationship Diagram (ERD).
+- Clear documentation including architecture design, risk assessment, and so on.
+- The CRUD application itself, coded in Python, that meets the User Stories on the Trello Board
+- Testing the application for validation using Pytest - consistent reports and evidence must be provided to prove a Test Driven Development (TDD) approach.
+- A fully functioning front-end website with integrated APIs, using Flask.
+- Code incorporated into a Version Control Machine (VCS), implementing the Feature-Branch model which will then be built through a Continuous Integration (CI) server i.e. Jenkins, before finally being deployed to a cloud-based Virtual Machine (VM)
