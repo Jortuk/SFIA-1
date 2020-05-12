@@ -3,6 +3,8 @@
 		<title>{{ title }}</title>
 	</head>
 	<body>
-		{% block body_content %}{% endblock %}
+	<div class=navbar>
+		<a href="{{ url_for('home') }}">Home</a>
+	{% block body_content %}{% endblock %}
 	</body>
 </html>
