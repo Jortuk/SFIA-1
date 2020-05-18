@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block body_content %}
+<h2>{{ title }}</h2>
+
+{% for shoe in shoes %}
+<div style="width: 20%; border: 1px solid powderblue;">
+	<p><b>Name:</b> {{ shoe.shoe_name }} <b>Size:</b> {{ shoe.shoe_size }}</p>
+	<p><b>Price:</b> £{{ shoe.shoe_price }}</p>
+</div>
+{% endfor %}
+
+{% endblock %}
