@@ -1,7 +1,7 @@
 from flask import render_template, redirect, url_for, request
 from application import app, db, bcrypt
 from application.models import Users, Shoes
-from application.forms import RegisterForm, LoginForm
+from application.forms import RegisterForm, LoginForm, UpdateShoeForm
 from flask_login import login_user, current_user, logout_user, login_required
 
 @app.route('/')
@@ -13,6 +13,11 @@ def home():
 def shoes():
     shoeData = Shoes.query.all()
     return render_template('shoes.html', title='Shoes', shoes=shoeData)
+
+@app.route('/shoesadmin')
+def shoesadmin():
+    shoeData = Shoes.query.all()
+    return render_template('shoesadmin.html', title='Shoes', shoes=shoeData)
 
 @app.route('/shops')
 def shops():
@@ -48,6 +53,7 @@ def login():
             else:
                 return redirect(url_for('home'))
     return render_template('login.html', title='Login', form=form)
+
 @app.route("/logout", methods=['GET', 'POST'])
 def logout():
     logout_user()
@@ -56,3 +62,17 @@ def logout():
 @app.route('/about')
 def about():
     return render_template('about.html', title="About Page")
+
+@app.route('/shoe_update/<id>', methods=['GET', 'POST'])
+def updateShoe(id):
+    form = UpdateShoeForm()
+    getShoe = Shoes.query.filter_by(shoe_id=id).first()
+    if form.validate_on_submit():
+        getShoe.shoe_name = form.shoe_name.data
+        getShoe.shoe_price = form.shoe_price.data
+        db.session.commit()
+        return redirect(url_for('shoesadmin'))
+    elif request.method == 'GET':
+        form.shoe_name.data = getShoe.shoe_name
+        form.shoe_price.data = getShoe.shoe_price
+    return render_template('shoe_update.html', title="Shoe Update", form=form, shoe=getShoe)

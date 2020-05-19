@@ -6,12 +6,11 @@ class Shoes(db.Model):
     shoe_id = db.Column(db.Integer, primary_key=True)
     shoe_name = db.Column(db.String(30), nullable=False)
     shoe_size = db.Column(db.String(2), nullable=False)
-    shoe_price = db.Column(db.Float(6), nullable=False)
+    shoe_price = db.Column(db.Float, nullable=False)
 
     def __repr__(self):
         return ''.join([
-            'Name: ', self.shoe_name, ' ', 'Size: ', self.shoe_size, '\r\n',
-            'Price: ', self.shoe_price
+            'ID :', str(self.shoe_id)
         ])
 
 class Shops(db.Model):
