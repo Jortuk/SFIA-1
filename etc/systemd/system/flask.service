@@ -1,0 +1,8 @@
+[Unit]
+Description=SFIA-1 Project
+[Service]
+User=jenkins
+ExecStart=/var/lib/jenkins/workspace/sfia1_freestyle/script/installation.sh
+
+[Install]
+WantedBy=multi-user.target
