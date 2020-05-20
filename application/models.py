@@ -8,31 +8,22 @@ class Shoes(db.Model):
     shoe_name = db.Column(db.String(30), nullable=False)
     shoe_size = db.Column(db.String(2), nullable=False)
     shoe_price = db.Column(db.Float, nullable=False)
-    shoe = db.relationship('ShoesShops', backref='s1', lazy=True)
-
-    def __repr__(self):
-        return ''.join([
-            'ID:', str(self.shoe_id)
-        ])
+    shoe = db.relationship('ShoesShops', backref='shoe', lazy=True)
 
 class Shops(db.Model):
     __tablename__ = 'shops'
     shop_id = db.Column(db.Integer, primary_key=True)
     shop_address = db.Column(db.String(100), nullable=False, unique=True)
     shop_city = db.Column(db.String(30), nullable=False)
-    shop = db.relationship('ShoesShops', backref='s2', lazy=True)
-
-    def __repr__(self):
-        return ''.join([
-            'ID:', str(self.shop_id)
-        ])
+    shop = db.relationship('ShoesShops', backref='shop', lazy=True)
 
 class ShoesShops(db.Model):
     __tablename__ = 'shoesShops'
     id = db.Column(db.Integer, primary_key=True)
+    quantity = db.Column(db.Integer, nullable=False)
     shoe_id = db.Column(db.Integer, db.ForeignKey('shoes.shoe_id'), nullable=False)
     shop_id = db.Column(db.Integer, db.ForeignKey('shops.shop_id'), nullable=False)
-    quantity = db.Column(db.Integer, nullable=False)
+    
     
     
 
