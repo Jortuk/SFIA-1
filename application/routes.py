@@ -103,3 +103,19 @@ def deleteShoe(id):
 @app.route('/shop1', methods=['GET', 'POST'])
 def shop1():
     return render_template('shop1.html', title="4 Aglet Avenue")
+
+@app.route('/shop2', methods=['GET', 'POST'])
+def shop1():
+    return render_template('shop2.html', title="2 Laces Lane")
+
+@app.route('/shop3', methods=['GET', 'POST'])
+def shop1():
+    return render_template('shop3.html', title="1 Pair Place")
+
+@app.route('/shop4', methods=['GET', 'POST'])
+def shop1():
+    return render_template('shop4.html', title="10 Sole Station")
+
+@app.route('/shop5', methods=['GET', 'POST'])
+def shop1():
+    return render_template('shop5.html', title="34 Heel Hill")
