@@ -11,7 +11,6 @@ def home():
 
 @app.route('/shoes')
 def shoes():
-    shoeData = Shoes.query.all()
     return render_template('shoes.html', title='Shoes', shoes=shoeData)
 
 @app.route('/shoesadmin')
