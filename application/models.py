@@ -1,5 +1,6 @@
 from application import db, login_manager
 from flask_login import UserMixin
+from sqlalchemy import ForeignKey
 
 class Shoes(db.Model):
     __tablename__ = 'shoes'
@@ -7,10 +8,11 @@ class Shoes(db.Model):
     shoe_name = db.Column(db.String(30), nullable=False)
     shoe_size = db.Column(db.String(2), nullable=False)
     shoe_price = db.Column(db.Float, nullable=False)
+    shoe = db.relationship('ShoesShops', backref='s1', lazy=True)
 
     def __repr__(self):
         return ''.join([
-            'ID :', str(self.shoe_id)
+            'ID:', str(self.shoe_id)
         ])
 
 class Shops(db.Model):
@@ -18,10 +20,11 @@ class Shops(db.Model):
     shop_id = db.Column(db.Integer, primary_key=True)
     shop_address = db.Column(db.String(100), nullable=False, unique=True)
     shop_city = db.Column(db.String(30), nullable=False)
+    shop = db.relationship('ShoesShops', backref='s2', lazy=True)
 
     def __repr__(self):
         return ''.join([
-            'Address: ', self.shop_address, ', ', self.shop_city
+            'ID:', str(self.shop_id)
         ])
 
 class ShoesShops(db.Model):
@@ -29,6 +32,9 @@ class ShoesShops(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     shoe_id = db.Column(db.Integer, db.ForeignKey('shoes.shoe_id'), nullable=False)
     shop_id = db.Column(db.Integer, db.ForeignKey('shops.shop_id'), nullable=False)
+    quantity = db.Column(db.Integer, nullable=False)
+    
+    
 
 class Users(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
