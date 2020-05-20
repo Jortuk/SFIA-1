@@ -21,7 +21,7 @@ def shoesadmin():
 
 @app.route('/shops')
 def shops():
-    return render_template('shops.html', title='Shops', shops=shopData)
+    return render_template('shops.html', title='Shops')
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
