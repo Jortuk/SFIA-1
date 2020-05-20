@@ -1,6 +1,6 @@
 from flask import render_template, redirect, url_for, request
 from application import app, db, bcrypt
-from application.models import Users, Shoes
+from application.models import Users, Shoes, Shops
 from application.forms import RegisterForm, LoginForm, UpdateShoeForm, AddShoeForm
 from flask_login import login_user, current_user, logout_user, login_required
 
@@ -100,3 +100,7 @@ def deleteShoe(id):
     db.session.delete(shoe)
     db.session.commit()
     return redirect(url_for('shoesadmin'))
+
+@app.route('/shop1', methods=['GET', 'POST'])
+def shop1():
+    return render_template('shop1.html', title="4 Aglet Avenue")
