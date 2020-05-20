@@ -2,6 +2,10 @@
 {% block body_content %}
 <h2>{{ title }}</h2>
 
+<form action="\shoe_add">
+    <button type="submit">Add Shoe</button>
+</form>
+
 {% for shoe in shoes %}
 <div style="width: 20%; border: 1px solid powderblue;">
 	<p><b>Name:</b> {{ shoe.shoe_name }} <b>Size:</b> {{ shoe.shoe_size }}</p>

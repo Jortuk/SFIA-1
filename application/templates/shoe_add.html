@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+{% block body_content %}
+<h2>{{ title }}</h2>
+<form method='POST' action=''>
+	{{ form.hidden_tag() }}
+	<div>
+	{{ form.shoe_id.label }}
+	{{ form.shoe_id }}
+	{% if form.shoe_id.errors %}
+   	     <div class="error">
+            	 {% for error in form.shoe_id.errors %}
+           		 <span>{{ error }}</span>
+       		 {% endfor %}
+   	     </div>
+    	{% endif %}
+	</div>
+	<br>
+	<div>
+	{{ form.shoe_name.label }}
+	{{ form.shoe_name }}
+	{% if form.shoe_name.errors %}
+             <div class="error">
+                 {% for error in form.shoe_name.errors %}
+                         <span>{{ error }}</span>
+                 {% endfor %}
+             </div>
+        {% endif %}
+	</div>
+    <br>
+	<div>
+    {{ form.shoe_size.label }}
+    {{ form.shoe_size }}
+    {% if form.shoe_size.errors %}
+             <div class="error">
+                 {% for error in form.shoe_size.errors %}
+                         <span>{{ error }}</span>
+                 {% endfor %}
+             </div>
+        {% endif %}
+    </div>
+    <br>
+    <div>
+    {{ form.shoe_price.label }}
+    {{ form.shoe_price }}
+    {% if form.shoe_price.errors %}
+             <div class="error">
+                 {% for error in form.shoe_price.errors %}
+                         <span>{{ error }}</span>
+                 {% endfor %}
+             </div>
+        {% endif %}
+    </div>
+    <br>
+    <div>
+	{{ form.submit }}
+	</div>
+</form>
+{% endblock %}

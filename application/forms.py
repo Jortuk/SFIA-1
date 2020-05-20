@@ -53,6 +53,27 @@ class RegisterForm(FlaskForm):
         if user:
             raise ValidationError('Email already assigned to a User!')
 
+class AddShoeForm(FlaskForm):
+    shoe_id = StringField('Shoe ID',
+        validators=[
+            DataRequired(),
+            Length(max=3)
+        ])
+    shoe_name = StringField('Shoe Name',
+        validators=[
+            DataRequired()
+        ])
+    shoe_size = StringField('Shoe Size',
+        validators=[
+            DataRequired(),
+            Length(max=2)
+        ])
+    shoe_price = FloatField('Shoe Price',
+        validators=[
+            DataRequired()
+        ])
+    submit = SubmitField('Add')
+
 class UpdateShoeForm(FlaskForm):
     shoe_name = StringField('Shoe Name',
         validators=[

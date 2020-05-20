@@ -1,7 +1,7 @@
 from flask import render_template, redirect, url_for, request
 from application import app, db, bcrypt
 from application.models import Users, Shoes
-from application.forms import RegisterForm, LoginForm, UpdateShoeForm
+from application.forms import RegisterForm, LoginForm, UpdateShoeForm, AddShoeForm
 from flask_login import login_user, current_user, logout_user, login_required
 
 @app.route('/')
@@ -63,6 +63,23 @@ def logout():
 def about():
     return render_template('about.html', title="About Page")
 
+@app.route('/shoe_add', methods=['GET', 'POST'])
+def addShoe():
+    form = AddShoeForm()
+    if form.validate_on_submit():
+        newShoe = Shoes(
+            shoe_id = form.shoe_id.data,
+            shoe_name = form.shoe_name.data,
+            shoe_size = form.shoe_size.data,
+            shoe_price = form.shoe_price.data
+        )
+        db.session.add(newShoe)
+        db.session.commit()
+        return redirect(url_for('shoesadmin'))
+    else:
+        print(form.errors)
+    return render_template('shoe_add.html', title="Add Shoe", form=form)
+
 @app.route('/shoe_update/<id>', methods=['GET', 'POST'])
 def updateShoe(id):
     form = UpdateShoeForm()
@@ -75,4 +92,11 @@ def updateShoe(id):
     elif request.method == 'GET':
         form.shoe_name.data = getShoe.shoe_name
         form.shoe_price.data = getShoe.shoe_price
-    return render_template('shoe_update.html', title="Shoe Update", form=form, shoe=getShoe)
+    return render_template('shoe_update.html', title="Update Shoe", form=form, shoe=getShoe)
+
+@app.route('/shoe_update/<id>/delete', methods=['GET', 'POST'])
+def deleteShoe(id):
+    shoe = Shoes.query.filter_by(shoe_id=id).first()
+    db.session.delete(shoe)
+    db.session.commit()
+    return redirect(url_for('shoesadmin'))
