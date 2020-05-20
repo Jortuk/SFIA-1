@@ -11,6 +11,7 @@ def home():
 
 @app.route('/shoes')
 def shoes():
+    shoeData = Shoes.query.all()
     return render_template('shoes.html', title='Shoes', shoes=shoeData)
 
 @app.route('/shoesadmin')
@@ -20,7 +21,6 @@ def shoesadmin():
 
 @app.route('/shops')
 def shops():
-    shopData = shops.query.all()
     return render_template('shops.html', title='Shops', shops=shopData)
 
 @app.route('/register', methods=['GET', 'POST'])
