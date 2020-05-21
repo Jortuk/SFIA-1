@@ -120,7 +120,7 @@ def updateQuantity1(id):
         return redirect(url_for('shop1admin'))
     elif request.method == 'GET':
         form.quantity.data = getData.quantity
-    return render_template('shop1_update.html', title="Update Quantity", form=form, shoe=getData)
+    return render_template('shop1_update.html', title="Update Quantity", form=form, get=getData)
 
 @app.route('/shop2', methods=['GET', 'POST'])
 def shop2():
