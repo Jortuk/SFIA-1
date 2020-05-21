@@ -24,9 +24,6 @@ class ShoesShops(db.Model):
     shoe_id = db.Column(db.Integer, db.ForeignKey('shoes.shoe_id'), nullable=False)
     shop_id = db.Column(db.Integer, db.ForeignKey('shops.shop_id'), nullable=False)
     
-    
-    
-
 class Users(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
     user_name = db.Column(db.String(20), nullable=False, unique=True)
