@@ -151,7 +151,7 @@ def shop5admin():
     return render_template('shop5admin.html', title="34 Heel Hill", shoesshops=newData)
 
 @app.route('/quantity_update1/<id>', methods=['GET', 'POST'])
-def updateQuantity1():
+def updateQuantity1(id):
     form = UpdateQuantityForm()
     getShoe = ShoesShops.query.filter_by(shoe_id=id).first()
     if form.validate_on_submit():
