@@ -1,6 +1,6 @@
 from flask import render_template, redirect, url_for, request
 from application import app, db, bcrypt
-from application.models import Users, Shoes, Shops
+from application.models import Users, Shoes, Shops, ShoesShops
 from application.forms import RegisterForm, LoginForm, UpdateShoeForm, AddShoeForm
 from flask_login import login_user, current_user, logout_user, login_required
 
