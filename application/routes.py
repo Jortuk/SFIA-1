@@ -108,6 +108,7 @@ def shop1():
 @app.route('/shop1admin', methods=['GET', 'POST'])
 def shop1admin():
     newData = ShoesShops.query.all()
+    getShoe = ShoesShops.query.filter_by(shoe_id=id).first()
     return render_template('shop1admin.html', title="4 Aglet Avenue", shoesshops=newData, shoe=getShoe)
 
 @app.route('/shop2', methods=['GET', 'POST'])
