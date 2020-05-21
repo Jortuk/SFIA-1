@@ -3,11 +3,7 @@
 <h2>{{ title }}</h2>
 <p>Listed below are our current shops. Find one near you:</p>
 <br>
-{% if current_user.is_authenticated %}
-<a href="{{ url_for('shop1admin') }}">4 Aglet Avenue, <b>York</b></a>
-{% else %}
 <a href="{{ url_for('shop1') }}">4 Aglet Avenue, <b>York</b></a>
-{% endif %}
 <br>
 <br>
 <a href="{{ url_for('shop2') }}">2 Laces Lane, <b>Manchester</b></a>
