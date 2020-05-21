@@ -4,7 +4,11 @@
 <p>Welcome to Shoose!</p>
 <p>The site that lets you find where and which Shoose to choose...</p>
 <br>
+{% if current_user.is_authenticated %}
+<p>Take a look at what <b>shoes</b> we offer, <a href="{{ url_for('shoesadmin') }}">here!</a></p>
+{% else %}
 <p>Take a look at what <b>shoes</b> we offer, <a href="{{ url_for('shoes') }}">here!</a></p>
+{% endif %}
 <br>
 <p>Browse our <b>shops</b> to see where you can buy your desired shoe, <a href="{{ url_for('shops') }}">here!</a></p>
 {% endblock %}
