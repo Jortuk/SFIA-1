@@ -2,7 +2,7 @@
 {% block body_content %}
 <h2>{{ title }}</h2>
 {% for x in shoesshops %}
-    {% if shoesshops.shop_id is 1 %}
+    {% if shoesshops.shop_id is '1' %}
     <div style="width: 20%; border: 1px solid powderblue;">
         <p><b>Name:</b> {{ x.shoe.shoe_name }} <b>Size:</b> {{ x.shoe.shoe_size }}</p>
         <p><b>Price:</b> £{{ x.shoe.shoe_price }} <b>Quantity:</b> {{ x.quantity }}</p>
