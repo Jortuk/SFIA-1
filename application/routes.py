@@ -127,6 +127,23 @@ def shop2():
     newData = ShoesShops.query.all()
     return render_template('shop2.html', title="2 Laces Lane", shoesshops=newData)
 
+@app.route('/shop2admin', methods=['GET', 'POST'])
+def shop2admin():
+    newData = ShoesShops.query.all()
+    return render_template('shop2admin.html', title="2 Laces Lane", shoesshops=newData)
+
+@app.route('/update_shop2/<id>', methods=['GET', 'POST'])
+def updateShop2(id):
+    form = UpdateQuantityForm()
+    getQuan = ShoesShops.query.filter_by(shoe_id=id).first()
+    if form.validate_on_submit():
+        getQuan.quantity = form.quantity.data
+        db.session.commit()
+        return redirect(url_for('shop2admin'))
+    elif request.method == 'GET':
+        form.quantity.data = getQuan.quantity
+    return render_template('shop2_update.html', title="Update Quantity", form=form, x=getQuan)
+
 @app.route('/shop3', methods=['GET', 'POST'])
 def shop3():
     newData = ShoesShops.query.all()
