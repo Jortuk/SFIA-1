@@ -120,7 +120,7 @@ def updateShop1(id):
         return redirect(url_for('shop1admin'))
     elif request.method == 'GET':
         form.quantity.data = getQuan.quantity
-    return render_template('shop1_update.html', title="Update Quantity", form=form, x=getQuan)
+    return render_template('shop_update.html', title="Update Quantity", form=form, x=getQuan)
 
 @app.route('/shop2', methods=['GET', 'POST'])
 def shop2():
@@ -142,12 +142,30 @@ def updateShop2(id):
         return redirect(url_for('shop2admin'))
     elif request.method == 'GET':
         form.quantity.data = getQuan.quantity
-    return render_template('shop2_update.html', title="Update Quantity", form=form, x=getQuan)
+    return render_template('shop_update.html', title="Update Quantity", form=form, x=getQuan)
 
 @app.route('/shop3', methods=['GET', 'POST'])
 def shop3():
     newData = ShoesShops.query.all()
     return render_template('shop3.html', title="1 Pair Place", shoesshops=newData)
+
+@app.route('/shop3admin', methods=['GET', 'POST'])
+def shop3admin():
+    newData = ShoesShops.query.all()
+    return render_template('shop3admin.html', title="1 Pair Place", shoesshops=newData)
+
+@app.route('/update_shop3/<id>', methods=['GET', 'POST'])
+def updateShop3(id):
+    form = UpdateQuantityForm()
+    getQuan = ShoesShops.query.filter_by(shoe_id=id).first()
+    if form.validate_on_submit():
+        getQuan.quantity = form.quantity.data
+        db.session.commit()
+        return redirect(url_for('shop3admin'))
+    elif request.method == 'GET':
+        form.quantity.data = getQuan.quantity
+    return render_template('shop_update.html', title="Update Quantity", form=form, x=getQuan)
+
 
 @app.route('/shop4', methods=['GET', 'POST'])
 def shop4():
