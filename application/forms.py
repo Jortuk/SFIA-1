@@ -90,7 +90,7 @@ def shoe_query():
 class UpdateQuantityForm(FlaskForm):
     quantity = StringField('Quantity',
         validators=[
-            DataRequired()
+            DataRequired(),
             Length(max=100)
         ])
     submit = SubmitField('Update')
