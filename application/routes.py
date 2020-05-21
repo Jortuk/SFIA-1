@@ -1,7 +1,7 @@
 from flask import render_template, redirect, url_for, request
 from application import app, db, bcrypt
 from application.models import Users, Shoes, Shops, ShoesShops
-from application.forms import RegisterForm, LoginForm, UpdateShoeForm, AddShoeForm, UpdateQuantityForm
+from application.forms import LoginForm, UpdateShoeForm, AddShoeForm, UpdateQuantityForm
 from flask_login import login_user, current_user, logout_user, login_required
 
 @app.route('/')
@@ -23,20 +23,6 @@ def shoesadmin():
 def shops():
     return render_template('shops.html', title='Shops')
 
-@app.route('/register', methods=['GET', 'POST'])
-def register():
-    form = RegisterForm()
-    if form.validate_on_submit():
-        hash_pw = bcrypt.generate_password_hash(form.password.data)
-
-        user = Users(user_name=form.user_name.data, email=form.email.data, password=hash_pw)
-
-        db.session.add(user)
-        db.session.commit()
-
-        return redirect(url_for('login'))
-    return render_template('register.html', title='Register', form=form)
-
 @app.route("/login", methods=['GET', 'POST'])
 def login():
     if current_user.is_authenticated:
@@ -57,10 +43,6 @@ def login():
 def logout():
     logout_user()
     return redirect(url_for('login'))
-
-@app.route('/about')
-def about():
-    return render_template('about.html', title="About Page")
 
 @app.route('/shoe_add', methods=['GET', 'POST'])
 def addShoe():
