@@ -113,14 +113,14 @@ def shop1admin():
 @app.route('/quantity_update1/<id>', methods=['GET', 'POST'])
 def updateQuantity1(id):
     form = UpdateQuantityForm()
-    getShoe = ShoesShops.query.filter_by(shoe_id=id).first()
+    getData = ShoesShops.query.filter_by(shoe_id=id).first()
     if form.validate_on_submit():
-        getShoe.quantity = form.quantity.data
+        getData.quantity = form.quantity.data
         db.session.commit()
         return redirect(url_for('shop1admin'))
     elif request.method == 'GET':
-        form.quantity.data = getShoe.quantity
-    return render_template('shop1_update.html', title="Update Quantity", form=form, shoe=getShoe)
+        form.quantity.data = getData.quantity
+    return render_template('shop1_update.html', title="Update Quantity", form=form, shoe=getData)
 
 @app.route('/shop2', methods=['GET', 'POST'])
 def shop2():
