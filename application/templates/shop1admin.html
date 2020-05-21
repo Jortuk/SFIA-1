@@ -6,12 +6,11 @@
     <div style="width: 20%; border: 1px solid powderblue;">
         <p><b>Name:</b> {{ x.shoe.shoe_name }} <b>Size:</b> {{ x.shoe.shoe_size }}</p>
         <p><b>Price:</b> £{{ x.shoe.shoe_price }} <b>Quantity:</b> {{ x.quantity }}</p>
-    </div>
 
     <form action="\quantity_update1\{{ shoesshops.shoe_id }}">
         <button type="submit">Update Quantity</button>
     </form>
-
+    </div>
     {% endif %}
 {% endfor %}
 <br>
