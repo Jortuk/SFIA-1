@@ -110,46 +110,6 @@ def shop1admin():
     newData = ShoesShops.query.all()
     return render_template('shop1admin.html', title="4 Aglet Avenue", shoesshops=newData)
 
-@app.route('/shop2', methods=['GET', 'POST'])
-def shop2():
-    newData = ShoesShops.query.all()
-    return render_template('shop2.html', title="2 Laces Lane", shoesshops=newData)
-
-@app.route('/shop2admin', methods=['GET', 'POST'])
-def shop2admin():
-    newData = ShoesShops.query.all()
-    return render_template('shop2admin.html', title="2 Laces Lane", shoesshops=newData)
-
-@app.route('/shop3', methods=['GET', 'POST'])
-def shop3():
-    newData = ShoesShops.query.all()
-    return render_template('shop3.html', title="1 Pair Place", shoesshops=newData)
-
-@app.route('/shop3admin', methods=['GET', 'POST'])
-def shop3admin():
-    newData = ShoesShops.query.all()
-    return render_template('shop3admin.html', title="1 Pair Place", shoesshops=newData)
-
-@app.route('/shop4', methods=['GET', 'POST'])
-def shop4():
-    newData = ShoesShops.query.all()
-    return render_template('shop4.html', title="10 Sole Station", shoesshops=newData)
-
-@app.route('/shop4admin', methods=['GET', 'POST'])
-def shop4admin():
-    newData = ShoesShops.query.all()
-    return render_template('shop4admin.html', title="10 Sole Station", shoesshops=newData)
-
-@app.route('/shop5', methods=['GET', 'POST'])
-def shop5():
-    newData = ShoesShops.query.all()
-    return render_template('shop5.html', title="34 Heel Hill", shoesshops=newData)
-
-@app.route('/shop5admin', methods=['GET', 'POST'])
-def shop5admin():
-    newData = ShoesShops.query.all()
-    return render_template('shop5admin.html', title="34 Heel Hill", shoesshops=newData)
-
 @app.route('/quantity_update1/<id>', methods=['GET', 'POST'])
 def updateQuantity1(id):
     form = UpdateQuantityForm()
@@ -162,50 +122,22 @@ def updateQuantity1(id):
         form.quantity.data = getShoe.quantity
     return render_template('shop1_update.html', title="Update Quantity", form=form, shoe=getShoe)
 
-@app.route('/quantity_update2/<id>', methods=['GET', 'POST'])
-def updateQuantity2():
-    form = UpdateQuantityForm()
-    getShoe = ShoesShops.query.filter_by(shoe_id=id).first()
-    if form.validate_on_submit():
-        getShoe.quantity = form.quantity.data
-        db.session.commit()
-        return redirect(url_for('shop2admin'))
-    elif request.method == 'GET':
-        form.quantity.data = getShoe.quantity
-    return render_template('shop2_update.html', title="Update Quantity", form=form, shoe=getShoe)
+@app.route('/shop2', methods=['GET', 'POST'])
+def shop2():
+    newData = ShoesShops.query.all()
+    return render_template('shop2.html', title="2 Laces Lane", shoesshops=newData)
 
-@app.route('/quantity_update3/<id>', methods=['GET', 'POST'])
-def updateQuantity3():
-    form = UpdateQuantityForm()
-    getShoe = ShoesShops.query.filter_by(shoe_id=id).first()
-    if form.validate_on_submit():
-        getShoe.quantity = form.quantity.data
-        db.session.commit()
-        return redirect(url_for('shop3admin'))
-    elif request.method == 'GET':
-        form.quantity.data = getShoe.quantity
-    return render_template('shop3_update.html', title="Update Quantity", form=form, shoe=getShoe)
+@app.route('/shop3', methods=['GET', 'POST'])
+def shop3():
+    newData = ShoesShops.query.all()
+    return render_template('shop3.html', title="1 Pair Place", shoesshops=newData)
 
-@app.route('/quantity_update4/<id>', methods=['GET', 'POST'])
-def updateQuantity4():
-    form = UpdateQuantityForm()
-    getShoe = ShoesShops.query.filter_by(shoe_id=id).first()
-    if form.validate_on_submit():
-        getShoe.quantity = form.quantity.data
-        db.session.commit()
-        return redirect(url_for('shop4admin'))
-    elif request.method == 'GET':
-        form.quantity.data = getShoe.quantity
-    return render_template('shop4_update.html', title="Update Quantity", form=form, shoe=getShoe)
+@app.route('/shop4', methods=['GET', 'POST'])
+def shop4():
+    newData = ShoesShops.query.all()
+    return render_template('shop4.html', title="10 Sole Station", shoesshops=newData)
 
-@app.route('/quantity_update5/<id>', methods=['GET', 'POST'])
-def updateQuantity5():
-    form = UpdateQuantityForm()
-    getShoe = ShoesShops.query.filter_by(shoe_id=id).first()
-    if form.validate_on_submit():
-        getShoe.quantity = form.quantity.data
-        db.session.commit()
-        return redirect(url_for('shop5admin'))
-    elif request.method == 'GET':
-        form.quantity.data = getShoe.quantity
-    return render_template('shop5_update.html', title="Update Quantity", form=form, shoe=getShoe)
+@app.route('/shop5', methods=['GET', 'POST'])
+def shop5():
+    newData = ShoesShops.query.all()
+    return render_template('shop5.html', title="34 Heel Hill", shoesshops=newData)
