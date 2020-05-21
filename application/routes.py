@@ -112,7 +112,8 @@ def shop2():
 
 @app.route('/shop3', methods=['GET', 'POST'])
 def shop3():
-    return render_template('shop3.html', title="1 Pair Place")
+    newData = ShoesShops.query.all()
+    return render_template('shop3.html', title="1 Pair Place", shoesshops=newData)
 
 @app.route('/shop4', methods=['GET', 'POST'])
 def shop4():
