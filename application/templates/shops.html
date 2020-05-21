@@ -10,30 +10,14 @@
 {% endif %}
 <br>
 <br>
-{% if current_user.is_authenticated %}
-<a href="{{ url_for('shop2admin') }}">2 Laces Lane, <b>Manchester</b></a>
-{% else %}
 <a href="{{ url_for('shop2') }}">2 Laces Lane, <b>Manchester</b></a>
-{% endif %}
 <br>
 <br>
-{% if current_user.is_authenticated %}
-<a href="{{ url_for('shop3admin') }}">1 Pair Place, <b>Leeds</b></a>
-{% else %}
 <a href="{{ url_for('shop3') }}">1 Pair Place, <b>Leeds</b></a>
-{% endif %}
 <br>
 <br>
-{% if current_user.is_authenticated %}
-<a href="{{ url_for('shop4admin') }}">10 Sole Station, <b>London</b></a>
-{% else %}
 <a href="{{ url_for('shop4') }}">10 Sole Station, <b>London</b></a>
-{% endif %}
 <br>
 <br>
-{% if current_user.is_authenticated %}
-<a href="{{ url_for('shop5admin') }}">34 Heel Hill, <b>Poole</b></a>
-{% else %}
 <a href="{{ url_for('shop5') }}">34 Heel Hill, <b>Poole</b></a>
-{% endif %}
 {% endblock %}
