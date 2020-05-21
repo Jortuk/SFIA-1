@@ -102,7 +102,8 @@ def deleteShoe(id):
 
 @app.route('/shop1', methods=['GET', 'POST'])
 def shop1():
-    return render_template('shop1.html', title="4 Aglet Avenue")
+    newData = ShoesShops.query.all()
+    return render_template('shop1.html', title="4 Aglet Avenue", shoesshops=newData )
 
 @app.route('/shop2', methods=['GET', 'POST'])
 def shop2():
