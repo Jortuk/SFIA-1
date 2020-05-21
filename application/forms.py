@@ -17,7 +17,6 @@ class LoginForm(FlaskForm):
             DataRequired(),
         ]
     )
-
     remember = BooleanField('Remember Me?')
     submit = SubmitField('Login')
 
@@ -87,3 +86,11 @@ class UpdateShoeForm(FlaskForm):
 
 def shoe_query():
     return Shoes.query
+
+class UpdateQuantityForm(FlaskForm):
+    quantity = StringField('Quantity',
+        validators=[
+            DataRequired()
+            Length(max=100)
+        ])
+    submit = SubmitField('Update')
