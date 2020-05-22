@@ -18,4 +18,4 @@ cd /var/lib/jenkins/workspace/sfia1_freestyle
 
 source ~/.bashrc
 
-gunicorn --bind=0.0.0.0:5000 application:app
+gunicorn --bind=0.0.0.0:5000 app:app
