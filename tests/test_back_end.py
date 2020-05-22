@@ -461,6 +461,25 @@ class TestPosts(TestBase):
             )
             self.assertIn(b"3", response.data)
 
+    def test_update_shop5url(self):
+        with self.client:
+            self.client.post(
+                url_for('login'),
+                data=dict(
+                    email="admin@admin.com",
+                    password="admin2020"
+                ),
+            follow_redirects=True
+            )
+            response = self.client.post(
+                url_for('updateShop5',id=2),
+                data=dict(
+                    quantity="3"
+                ),
+            follow_redirects=True
+            )
+            self.assertIn(b"3", response.data)
+
 
 
 
