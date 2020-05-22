@@ -52,9 +52,6 @@ class UpdateShoeForm(FlaskForm):
         ])
     submit = SubmitField('Update')
 
-def shoe_query():
-    return Shoes.query
-
 class UpdateQuantityForm(FlaskForm):
     quantity = StringField('Quantity',
         validators=[
