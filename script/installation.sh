@@ -14,7 +14,7 @@ source /var/lib/jenkins/workspace/sfia1_freestyle/venv/bin/activate
 
 pip3 install -r requirements.txt
 
-cd /var/lib/jenkins/workspace/sfia1_freestyle/
+cd /var/lib/jenkins/workspace/sfia1_freestyle
 
 source ~/.bashrc
 
