@@ -29,9 +29,6 @@ class Users(db.Model, UserMixin):
     user_name = db.Column(db.String(20), nullable=False, unique=True)
     email = db.Column(db.String(50), nullable=False, unique=True)
     password = db.Column(db.String(200), nullable=False)
-
-    def __repr__(self):
-        return ''.join(['UserID: ', str(self.id), '\r\n', 'Email: ', self.email])
         
     def get_id(self):
             return self.id
