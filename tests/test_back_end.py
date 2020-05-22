@@ -35,27 +35,42 @@ class TestBase(TestCase):
         admin = Users(user_name="testadmin", email="admin@admin.com", password=hashed_pw)
 
         #create shop inside Shops table
-        shop1 = Shops(shop_address="1 Test Address", shop_city="Test City")
+        shop1 = Shops(shop_address="1 Test Address", shop_city="Test1City")
         shop2 = Shops(shop_address="2 Test Address", shop_city="Test2City")
+        shop3 = Shops(shop_address="3 Test Address", shop_city="Test3City")
+        shop4 = Shops(shop_address="4 Test Address", shop_city="Test4City")
 
         #create shoe inside Shoes table
         shoe1 = Shoes(shoe_name="testshoe1", shoe_size="S", shoe_price="39.99")
         shoe2 = Shoes(shoe_name="testshoe2", shoe_size="S", shoe_price="39.99")
         shoe3 = Shoes(shoe_name="testshoe3", shoe_size="S", shoe_price="39.99")
+        shoe4 = Shoes(shoe_name="testshoe4", shoe_size="S", shoe_price="39.99")
+        shoe5 = Shoes(shoe_name="testshoe5", shoe_size="S", shoe_price="39.99")
+        
 
         #create shoe inside ShoesShops table
         shoeshop1 = ShoesShops(quantity=1, shoe_id=2, shop_id=1)
         shoeshop2 = ShoesShops(quantity=2, shoe_id=3, shop_id=2)
+        shoeshop3 = ShoesShops(quantity=15, shoe_id=4, shop_id=3)
+        shoeshop4 = ShoesShops(quantity=5, shoe_id=4, shop_id=3)
+        shoeshop5 = ShoesShops(quantity=96, shoe_id=5, shop_id=4)
 
         #save data to database
         db.session.add(admin)
         db.session.add(shop1)
         db.session.add(shop2)
+        db.session.add(shop3)
+        db.session.add(shop4)
         db.session.add(shoe1)
         db.session.add(shoe2)
         db.session.add(shoe3)
+        db.session.add(shoe4)
+        db.session.add(shoe5)
         db.session.add(shoeshop1)
         db.session.add(shoeshop2)
+        db.session.add(shoeshop3)
+        db.session.add(shoeshop4)
+        db.session.add(shoeshop5)
         db.session.commit()
 
     def tearDown(self):
@@ -322,7 +337,7 @@ class TestPosts(TestBase):
             response = self.client.post(
                 url_for('addShoe'),
                 data=dict(
-                    shoe_id=4,
+                    shoe_id=9,
                     shoe_name="Test",
                     shoe_size="S",
                     shoe_price=40
@@ -362,13 +377,13 @@ class TestPosts(TestBase):
             follow_redirects=True
             )
             response = self.client.post(
-                url_for('updateShop1',id=2),
+                '/update_shop1/2',
                 data=dict(
-                    quantity="4"
+                    quantity="84"
                 ),
             follow_redirects=True
             )
-            self.assertIn(b"4", response.data)
+            self.assertIn(b"84", response.data)
 
     def test_update_shop2(self):
         with self.client:
@@ -381,13 +396,13 @@ class TestPosts(TestBase):
             follow_redirects=True
             )
             response = self.client.post(
-                url_for('updateShop2',id=2),
+                'update_shop2/3',
                 data=dict(
-                    quantity="2"
+                    quantity="17"
                 ),
             follow_redirects=True
             )
-            self.assertIn(b"2", response.data)
+            self.assertIn(b"17", response.data)
 
     def test_update_shop3(self):
         with self.client:
@@ -400,13 +415,13 @@ class TestPosts(TestBase):
             follow_redirects=True
             )
             response = self.client.post(
-                url_for('updateShop3',id=2),
+                '/update_shop3/4',
                 data=dict(
-                    quantity="1"
+                    quantity="77"
                 ),
             follow_redirects=True
             )
-            self.assertIn(b"1", response.data)
+            self.assertIn(b"77", response.data)
 
     def test_update_shop4(self):
         with self.client:
@@ -419,7 +434,7 @@ class TestPosts(TestBase):
             follow_redirects=True
             )
             response = self.client.post(
-                url_for('updateShop4',id=2),
+                '/update_shop4/4',
                 data=dict(
                     quantity="10"
                 ),
@@ -438,7 +453,7 @@ class TestPosts(TestBase):
             follow_redirects=True
             )
             response = self.client.post(
-                url_for('updateShop5',id=2),
+                '/shoe_update5/5',
                 data=dict(
                     quantity="3"
                 ),
