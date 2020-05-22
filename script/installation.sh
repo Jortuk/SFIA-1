@@ -18,4 +18,4 @@ pip3 install -r requirements.txt
 
 cd /var/lib/jenkins/workspace/sfia1_freestyle/
 
-gunicorn --bind=0.0.0.0:5000 app:app
+gunicorn --bind=0.0.0.0:5000 application:app
