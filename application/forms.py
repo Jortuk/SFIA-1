@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField, PasswordField, BooleanField, FloatField
+from wtforms import StringField, SubmitField, PasswordField, BooleanField, FloatField, IntegerField
 from wtforms.validators import DataRequired, Length, Email, EqualTo, ValidationError
 from application.models import Users, Shoes
 from flask_login import current_user
@@ -56,7 +56,7 @@ def shoe_query():
     return Shoes.query
 
 class UpdateQuantityForm(FlaskForm):
-    quantity = StringField('Quantity',
+    quantity = IntegerField('Quantity',
         validators=[
             DataRequired(),
             Length(max=100)

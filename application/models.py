@@ -32,6 +32,7 @@ class Users(db.Model, UserMixin):
 
     def __repr__(self):
         return ''.join(['UserID: ', str(self.id), '\r\n', 'Email: ', self.email])
+        
     def get_id(self):
             return self.id
 
