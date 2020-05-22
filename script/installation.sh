@@ -16,4 +16,6 @@ source /var/lib/jenkins/workspace/sfia1_freestyle/venv/bin/activate
 
 pip3 install -r requirements.txt
 
-python3 /var/lib/jenkins/workspace/sfia1_freestyle/app.py
+cd /var/lib/jenkins/workspace/sfia1_freestyle/
+
+gunicorn --bind=0.0.0.0:5000 app:app
