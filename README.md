@@ -2,9 +2,9 @@
 Following the QAC Fundamental Project Specification (DevOps Core) due for 26th May 2020.
 
 ## Index
-[Brief](#brief)
-  + [Project Proposal](#projectproposal)<br>
-[Trello Board](#trelloboard)
+1. [Brief](#brief)
++ [Project Proposal](#projectproposal)<br>
+2. [Trello Board](#trelloboard)
 
 ## Brief <a name="brief"></a>
 Design a Create Read Update and Delete (CRUD) application utilising tools, methodologies, and technologies that illustrate all core modules covered during training so far.
