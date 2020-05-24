@@ -6,6 +6,7 @@ Following the QAC Fundamental Project Specification (DevOps Core) due for 26th M
     + [Project Proposal](#projectproposal)
 2. [Trello Board](#trelloboard)
     + [Initial Board](#initialboard)
+    + [On-going Changes](#changes)
 
 ## Brief <a name="brief"></a>
 Design a Create Read Update and Delete (CRUD) application utilising tools, methodologies, and technologies that illustrate all core modules covered during training so far.
@@ -28,4 +29,6 @@ To track my project progression, I used a kanban Trello Board. This helped me to
 ### Initial Board <a name="initialboard"></a>
 ![image](https://drive.google.com/uc?export=view&id=1d6d1a2NCrQNdpFe7tiJo4Iyu_kyZTFBB)
 
-The above image displays my Trello Board prior to any project progression. As you can see, only the 'Product Backlog' and 'Tasks' columns are populated. The board also included an 'In Progress' column to show what was being worked on but not yet completed, a 'Tested?' column to illustrate what had been tested, for example the CRUD application itself, a 'Done' column to indicate what was finished, and finally a 'Bugs/Issues' column in case there were any problems while attempting to complete a task. 
+The above image displays my Trello Board prior to any project progression. As you can see, only the 'Product Backlog' and 'Tasks' columns are populated. The board also included an 'In Progress' column to show what was being worked on but not yet completed, a 'Tested?' column to illustrate what had been tested, for example the CRUD application itself, a 'Done' column to indicate what was finished, and finally a 'Bugs/Issues' column in case there were any problems while attempting to complete a task.
+
+### On-going Changes <a name="changes"></a>
