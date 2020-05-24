@@ -26,4 +26,4 @@ My project aims to function as an Inventory Management System (IMS) for footwear
 To track my project progression, I used a kanban Trello Board. This helped me to have an overview of different stages of the project. Although this wan an individual project, Agile methodology was carried out where possible, regarding the product and sprint (tasks) backlog. The product backlog contained User Stories that the CRUD application had to fulfill, then the tasks broke this down into smaller objectives that had to be completed to meet the end-goal.
 
 ### Initial Board <a name="initialboard"></a>
-!(https://drive.google.com/file/d/1d6d1a2NCrQNdpFe7tiJo4Iyu_kyZTFBB/view?usp=sharing)
+![alt text](https://drive.google.com/file/d/1d6d1a2NCrQNdpFe7tiJo4Iyu_kyZTFBB/view?usp=sharing)
