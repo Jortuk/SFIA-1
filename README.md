@@ -1,5 +1,5 @@
 # Footwear Inventory Management System 
-Following the QAC Fundamental Project Specification (DevOps Core) due for 23rd March 2020.
+Following the QAC Fundamental Project Specification (DevOps Core) due for 26th March 2020.
 
 ## Index
 [Brief](#Brief)
