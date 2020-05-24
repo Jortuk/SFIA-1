@@ -1,11 +1,11 @@
 # Footwear Inventory Management System 
-Following the QAC Fundamental Project Specification (DevOps Core) due for 26th March 2020.
+Following the QAC Fundamental Project Specification (DevOps Core) due for 26th May 2020.
 
 ## Index
 [Brief](#Brief)
 
 ## Brief
-Design a Create Read Update and Delete (CRUD) application utilising tools, methodologies, and technologies that illustrate all core modules covered during training.
+Design a Create Read Update and Delete (CRUD) application utilising tools, methodologies, and technologies that illustrate all core modules covered during training so far.
 
 The requirements are, however not limited too:
 - Trello Board (or Kanban equivalent).
