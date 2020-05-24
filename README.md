@@ -7,6 +7,7 @@ Following the QAC Fundamental Project Specification (DevOps Core) due for 26th M
 2. [Trello Board](#trelloboard)
     + [Initial Board](#initialboard)
     + [On-going Changes](#changes)
+    + [Final Board](#finalboard)
 
 ## Brief <a name="brief"></a>
 Design a Create Read Update and Delete (CRUD) application utilising tools, methodologies, and technologies that illustrate all core modules covered during training so far.
@@ -33,3 +34,7 @@ The above image displays my Trello Board prior to any project progression. As yo
 
 ### On-going Changes <a name="changes"></a>
 ![image](https://drive.google.com/uc?export=view&id=1__VUMEC28VAjuXz1Q5r4F49viOVwbWrq)
+
+As project development went on, I made some modifications to the Trello Board. First, the MoSCoW (Must have, Should have, Could have, Would have) method was implemented to prioritise which tasks were the most important to complete, from most to least important. Note, names such as 'Could Haves' and 'Would Haves' did not mean they might have not made it into the project, they were only for prioritisation purposes. Second, tasks that had been completed were moved to the 'Done' column, as shown above. Lastly, a bug was encountered when creating a MySQL foreign key. However, this issue was resolved and labelled as 'FIXED'.
+
+### Final Board <a name="finalboard"></a>
