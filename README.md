@@ -27,3 +27,4 @@ To track my project progression, I used a kanban Trello Board. This helped me to
 
 ### Initial Board <a name="initialboard"></a>
 ![image](https://drive.google.com/uc?export=view&id=1d6d1a2NCrQNdpFe7tiJo4Iyu_kyZTFBB)
+sample text
