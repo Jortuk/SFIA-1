@@ -10,6 +10,8 @@ Following the QAC Fundamental Project Specification (DevOps Core) due for 26th M
     + [Final Board](#finalboard)
 3. [Risk Assessment](#risk)
     + [Risk Assessment Revisited](#riskrevisit)
+4. [Architecture](#archi)
+    + [Entity Relationship Diagrams](#erd)
 
 ## Brief <a name="brief"></a>
 Design a Create Read Update and Delete (CRUD) application utilising tools, methodologies, and technologies that illustrate all core modules covered during training so far.
@@ -49,3 +51,6 @@ Due to the size of my risk assessment being too big to turn into a .PNG, the lin
 
 ### Risk Assessment Revisited <a name="riskrevisit"></a>
 The link for this assessment can be found <a href="https://drive.google.com/open?id=12DV4u67lq7aSlocLogD3vRRZl9lboC5qcYLrbm9IJpY">here</a>. During the project, I revisited my initial risk assessment and added an 'Update' column. This was filled with new considerations and discussed how effective the original solutions were.
+
+## Architecture <a name="archi"></a>
+### Entity Relationship Diagrams <a name="erd"></a>
