@@ -3,7 +3,7 @@ Following the QAC Fundamental Project Specification (DevOps Core) due for 26th M
 
 ## Index
 [Brief](#brief)
-+ [Project Proposal](#projectproposal)
++ [Project Proposal](#projectproposal)<br>
 [Trello Board](#trelloboard)
 
 ## Brief <a name="brief"></a>
