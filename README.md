@@ -8,6 +8,7 @@ Following the QAC Fundamental Project Specification (DevOps Core) due for 26th M
     + [Initial Board](#initialboard)
     + [On-going Changes](#changes)
     + [Final Board](#finalboard)
+3. [Risk Assessment](#risk)
 
 ## Brief <a name="brief"></a>
 Design a Create Read Update and Delete (CRUD) application utilising tools, methodologies, and technologies that illustrate all core modules covered during training so far.
@@ -40,3 +41,6 @@ As project development went on, I made some modifications to the Trello Board. F
 ### Final Board <a name="finalboard"></a>
 ![image](https://drive.google.com/uc?export=view&id=1js5eU76mnwDvg3Z7SRNWD73M6Ly9UruS)
 
+By the project due date (26th May), all of the User Stories had been met, and issues were fixed and near to none. However, integration testing using Selenium had not been completed. Unfortunately, this was a result of the testing not being fully conducted because of time restrictions toward the end of the project.
+
+## Risk Assessment <a name="risk"></a>
