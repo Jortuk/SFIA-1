@@ -5,6 +5,7 @@ Following the QAC Fundamental Project Specification (DevOps Core) due for 26th M
 1. [Brief](#brief)
     + [Project Proposal](#projectproposal)
 2. [Trello Board](#trelloboard)
+    + [Initial Board](#initialboard)
 
 ## Brief <a name="brief"></a>
 Design a Create Read Update and Delete (CRUD) application utilising tools, methodologies, and technologies that illustrate all core modules covered during training so far.
@@ -22,4 +23,6 @@ The requirements are, however not limited too:
 My project aims to function as an Inventory Management System (IMS) for footwear products, for a hypothetical website - 'Shoose.com'. As an admin, shoes can be added and linked to pre-existing shops within the MySQL database. Both are joined together on a joining table, showcasing two many-to-many relationships. The IMS will be automatically built using Jenkins and GitHub Webhooks.
 
 ## Trello Board <a name="trelloboard"></a>
+To track my project progression, I used a kanban Trello Board. This helped me to have an overview of different stages of the project. Although this wan an individual project, Agile methodology was carried out where possible, regarding the product and sprint (tasks) backlog. The product backlog contained User Stories that the CRUD application had to fulfill, then the tasks broke this down into smaller objectives that had to be completed to meet the end-goal.
 
+### Initial Board <a name="initialboard"></a>
