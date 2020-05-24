@@ -2,10 +2,11 @@
 Following the QAC Fundamental Project Specification (DevOps Core) due for 26th May 2020.
 
 ## Index
-[Brief](#Brief)
+[Brief](#brief)
 + [Project Proposal](#projectproposal)
+[Trello Board](#trelloboard)
 
-## Brief
+## Brief <a name="brief"></a>
 Design a Create Read Update and Delete (CRUD) application utilising tools, methodologies, and technologies that illustrate all core modules covered during training so far.
 
 The requirements are, however not limited too:
@@ -19,3 +20,6 @@ The requirements are, however not limited too:
 
 ### Project Proposal <a name="projectproposal"></a>
 My project aims to function as an Inventory Management System (IMS) for footwear products, for a hypothetical website - 'Shoose.com'. As an admin, shoes can be added and linked to pre-existing shops within the MySQL database. Both are joined together on a joining table, showcasing two many-to-many relationships. The IMS will be automatically built using Jenkins and GitHub Webhooks.
+
+## Trello Board <a name="trelloboard"></a>
+
