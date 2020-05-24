@@ -54,4 +54,4 @@ The link for this assessment can be found <a href="https://drive.google.com/open
 
 ## Architecture <a name="archi"></a>
 ### Entity Relationship Diagrams <a name="erd"></a>
-![image](https://drive.google.com/uc?export=view&id=1EPlisFqm_wy1lS-dnFbTBhbzQ9hpPTv3)
+![image](https://drive.google.com/uc?export=view&id=1aQTzMF0KImPrel7Uz44MdZYTUBBGifn0)
