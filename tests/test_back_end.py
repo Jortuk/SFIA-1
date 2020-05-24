@@ -4,6 +4,7 @@ from flask import abort, url_for
 from flask_testing import TestCase
 
 from application import app, db, bcrypt
+from flask_login import current_user
 from application.models import Users, Shoes, Shops, ShoesShops
 from os import getenv
 
@@ -35,10 +36,11 @@ class TestBase(TestCase):
         admin = Users(user_name="testadmin", email="admin@admin.com", password=hashed_pw)
 
         #create shop inside Shops table
-        shop1 = Shops(shop_address="1 Test Address", shop_city="Test1City")
+        shop1= Shops(shop_address="1 Test Address", shop_city="Test1City")
         shop2 = Shops(shop_address="2 Test Address", shop_city="Test2City")
         shop3 = Shops(shop_address="3 Test Address", shop_city="Test3City")
         shop4 = Shops(shop_address="4 Test Address", shop_city="Test4City")
+        shop5 = Shops(shop_address="5 Test Address", shop_city="Test5City")
 
         #create shoe inside Shoes table
         shoe1 = Shoes(shoe_name="testshoe1", shoe_size="S", shoe_price="39.99")
@@ -46,14 +48,15 @@ class TestBase(TestCase):
         shoe3 = Shoes(shoe_name="testshoe3", shoe_size="S", shoe_price="39.99")
         shoe4 = Shoes(shoe_name="testshoe4", shoe_size="S", shoe_price="39.99")
         shoe5 = Shoes(shoe_name="testshoe5", shoe_size="S", shoe_price="39.99")
+        shoe6 = Shoes(shoe_name="testshoe6", shoe_size="S", shoe_price="39.99")
         
 
         #create shoe inside ShoesShops table
-        shoeshop1 = ShoesShops(quantity=1, shoe_id=2, shop_id=1)
-        shoeshop2 = ShoesShops(quantity=2, shoe_id=3, shop_id=2)
-        shoeshop3 = ShoesShops(quantity=15, shoe_id=4, shop_id=3)
-        shoeshop4 = ShoesShops(quantity=5, shoe_id=4, shop_id=3)
-        shoeshop5 = ShoesShops(quantity=96, shoe_id=5, shop_id=4)
+        shoeshop1 = ShoesShops(quantity=0, shoe_id=2, shop_id=1)
+        shoeshop2 = ShoesShops(quantity=0, shoe_id=3, shop_id=2)
+        shoeshop3 = ShoesShops(quantity=0, shoe_id=4, shop_id=3)
+        shoeshop4 = ShoesShops(quantity=0, shoe_id=5, shop_id=4)
+        shoeshop5 = ShoesShops(quantity=0, shoe_id=6, shop_id=5)
 
         #save data to database
         db.session.add(admin)
@@ -61,11 +64,13 @@ class TestBase(TestCase):
         db.session.add(shop2)
         db.session.add(shop3)
         db.session.add(shop4)
+        db.session.add(shop5)
         db.session.add(shoe1)
         db.session.add(shoe2)
         db.session.add(shoe3)
         db.session.add(shoe4)
         db.session.add(shoe5)
+        db.session.add(shoe6)
         db.session.add(shoeshop1)
         db.session.add(shoeshop2)
         db.session.add(shoeshop3)
@@ -324,6 +329,21 @@ class TestAuthenticatedViews(TestBase):
 
 class TestPosts(TestBase):
 
+    # def test_login(self):
+    #     if current_user.is_authenticated:
+    #         url_for('home')
+    #     else:
+    #         with self.client:
+    #             response = self.client.post(
+    #                 url_for('login'),
+    #                 data=dict(
+    #                     email="admin@admin.com",
+    #                     password="admin2020"
+    #                 ),
+    #             follow_redirects=True
+    #             )
+    #             self.assertIn(b'admin@admin.com', response.data)
+
     def test_add_new_shoe(self):
         with self.client:
             self.client.post(
@@ -379,11 +399,11 @@ class TestPosts(TestBase):
             response = self.client.post(
                 '/update_shop1/2',
                 data=dict(
-                    quantity="84"
+                    quantity="14"
                 ),
             follow_redirects=True
             )
-            self.assertIn(b"84", response.data)
+            self.assertIn(b"14", response.data)
 
     def test_update_shop2(self):
         with self.client:
@@ -398,11 +418,11 @@ class TestPosts(TestBase):
             response = self.client.post(
                 'update_shop2/3',
                 data=dict(
-                    quantity="17"
+                    quantity="52"
                 ),
             follow_redirects=True
             )
-            self.assertIn(b"17", response.data)
+            self.assertIn(b"52", response.data)
 
     def test_update_shop3(self):
         with self.client:
@@ -417,11 +437,11 @@ class TestPosts(TestBase):
             response = self.client.post(
                 '/update_shop3/4',
                 data=dict(
-                    quantity="77"
+                    quantity="11"
                 ),
             follow_redirects=True
             )
-            self.assertIn(b"77", response.data)
+            self.assertIn(b"11", response.data)
 
     def test_update_shop4(self):
         with self.client:
@@ -434,13 +454,13 @@ class TestPosts(TestBase):
             follow_redirects=True
             )
             response = self.client.post(
-                '/update_shop4/4',
+                '/update_shop4/5',
                 data=dict(
-                    quantity="10"
+                    quantity="23"
                 ),
             follow_redirects=True
             )
-            self.assertIn(b"10", response.data)
+            self.assertIn(b"23", response.data)
 
     def test_update_shop5(self):
         with self.client:
@@ -453,56 +473,10 @@ class TestPosts(TestBase):
             follow_redirects=True
             )
             response = self.client.post(
-                '/shoe_update5/5',
+                '/update_shop5/6',
                 data=dict(
-                    quantity="3"
+                    quantity="50"
                 ),
             follow_redirects=True
             )
-            self.assertIn(b"3", response.data)
-
-    def test_update_shop5url(self):
-        with self.client:
-            self.client.post(
-                url_for('login'),
-                data=dict(
-                    email="admin@admin.com",
-                    password="admin2020"
-                ),
-            follow_redirects=True
-            )
-            response = self.client.post(
-                url_for('updateShop5',id=2),
-                data=dict(
-                    quantity="3"
-                ),
-            follow_redirects=True
-            )
-            self.assertIn(b"3", response.data)
-
-
-
-
-
-
-    
- 
-
-# class TestPosts(TestBase):
-
- 
-
-#     def test_add_new_post(self):
-#         """
-#         Test that when I add a new post, I am redirected to the homepage with the new post visible
-#         """
-#         with self.client:
-#             response = self.client.post(
-#                 '/post',
-#                 data=dict(
-#                     title="Test Title",
-#                     content="Test Content"
-#                 ),
-#                 follow_redirects=True
-#             )
-#             self.assertIn(b'Test Title', response.data)
+            self.assertIn(b"50", response.data)
