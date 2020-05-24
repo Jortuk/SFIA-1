@@ -44,4 +44,4 @@ As project development went on, I made some modifications to the Trello Board. F
 By the project due date (26th May), all of the User Stories had been met, and issues were fixed and near to none. However, integration testing using Selenium had not been completed. Unfortunately, this was a result of the testing not being fully conducted because of time restrictions toward the end of the project.
 
 ## Risk Assessment <a name="risk"></a>
-Due to the size of my risk assessment being too big to turn into a .PNG, the link for it can be found <a href="https://drive.google.com/open?id=1P-GaIPDCMVp0goVafJUdVP-oQIsWDpqf">here.</a>
+Due to the size of my risk assessment being too big to turn into a .PNG, the link for it can be found <a href="https://drive.google.com/open?id=1P-GaIPDCMVp0goVafJUdVP-oQIsWDpqf" target="_blank">here.</a> The 'Likelihood' and 'Impact' columns are rated on a scale of 1 (low) to 5 (high).
