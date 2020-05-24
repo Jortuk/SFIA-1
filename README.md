@@ -38,5 +38,5 @@ The above image displays my Trello Board prior to any project progression. As yo
 As project development went on, I made some modifications to the Trello Board. First, the MoSCoW (Must have, Should have, Could have, Would have) method was implemented to prioritise which tasks were the most important to complete, from most to least important. Note, names such as 'Could Haves' and 'Would Haves' did not mean they might have not made it into the project, they were only for prioritisation purposes. Second, tasks that had been completed were moved to the 'Done' column, as shown above. Lastly, a bug was encountered when creating a MySQL foreign key. However, this issue was resolved and labelled as 'FIXED'.
 
 ### Final Board <a name="finalboard"></a>
-![image](https://drive.google.com/uc?export=view&id=1CbRan1zq6hwfmuog5CLgOE1uCU26XRrb)
+![image](https://drive.google.com/uc?export=view&id=1js5eU76mnwDvg3Z7SRNWD73M6Ly9UruS)
 
