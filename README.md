@@ -99,7 +99,7 @@ The following are all the tools, technologies and languages used to create and d
     + <b>Jinja2</b>: Allows for python variables and logic in HTML
 
 ## Front-end Design <a name="fdesign"></a>
-To keep this section concise, rather then showing both the user and admin front-end, only the admin view of the front-end will be shown. Although, keep in mind that the only difference is the user view does not have any of the Create, Update or Delete APIs.
+To keep this section concise, rather then showing both the user and admin front-end, only the admin view of the front-end will be shown. Although, keep in mind that the only difference is the user view does not have any of the Create, Update or Delete APIs. Although CCS was not a priority according to the project specification, a small amount has been added to slightly better the user experience (UX). The user interface (UI) has been laid out in a way that is user-friendly. 
 
 ### Home Page <a name="home"></a>
 ![](Documentation/images/home_page.PNG)
@@ -114,11 +114,17 @@ Next, the shoes page. Users can come to this page and see what Shoose.com has in
 ### Shops Page <a name="shops"></a>
 ![](Documentation/images/shops_page.PNG)
 
+Here, the shops available are listed. These links redirect the user to a selected shop, where they will find the shoes that are sold at that shop. 
+
 #### Example Shop <a name="exshop"></a>
 ![](Documentation/images/example_shop.PNG)
 
+As an example, the first shop is shown above. The shoes at this shop are shown through the joining table, shoesshops_tb, discussed earlier. It uses the shoe IDs to determine which shoes are displayed, as long as the shop ID is equal to 1. This is also the case for the following shops, where the shop ID will be 2, and so on. In addition, the admin can update the quantity of a shoe to fulfill the applications role as an IMS, and further adhere to the Update functionality. 
+
 ### Admin Login Page <a name="login"></a>
 ![](Documentation/images/login_page.PNG)
+
+On this page, an admin can login with an existing email and password that is within the 'Users' table of the MySQL database. The functionality for the login feature was given to the cohort by QA, therefore is will not count towards the overall mark for the project.
 
 ## Testing <a name="testing"></a>
 
