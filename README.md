@@ -21,6 +21,8 @@ Following the QAC Fundamental Project Specification (DevOps Core) due for 26th M
         + [Example Shop](#exshop)
     + [Admin Login Page](#login)
 7. [Testing](#testing)
+    + [PyTest](#pytest)
+    + [PyTest Coverage](#pytestcov)
 
 ## Brief <a name="brief"></a>
 Design a Create Read Update and Delete (CRUD) application utilising tools, methodologies, and technologies that illustrate all core modules covered during training so far.
@@ -110,3 +112,7 @@ To keep this section concise, rather then showing both the user and admin front-
 ### Admin Login Page <a name="login"></a>
 
 ## Testing <a name="testing"></a>
+
+### PyTest <a name="pytest"></a>
+
+### PyTest Coverage <a name="pytestcov"></a>
