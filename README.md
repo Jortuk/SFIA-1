@@ -20,6 +20,7 @@ Following the QAC Fundamental Project Specification (DevOps Core) due for 26th M
     + [Shops Page](#shops)
         + [Example Shop](#exshop)
     + [Admin Login Page](#login)
+7. [Testing](#testing)
 
 ## Brief <a name="brief"></a>
 Design a Create Read Update and Delete (CRUD) application utilising tools, methodologies, and technologies that illustrate all core modules covered during training so far.
@@ -107,3 +108,5 @@ To keep this section concise, rather then showing both the user and admin front-
 #### Example Shop <a name="exshop"></a>
 
 ### Admin Login Page <a name="login"></a>
+
+## Testing <a name="testing"></a>
