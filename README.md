@@ -155,3 +155,6 @@ Overall, a coverage of 99% was attained. Using the 'pytest --cov ./application/ 
 I followed best practices by implementing the Feature Branch model, just as we learned during training. Before being merged onto the 'master' branch, all code was tested, version controlled and deployed using a 'developer branch before finalisation.
 
 ![](Documentation/images/branch_merge.PNG)
+
+<b>Application Deployed onto a Production WSGI Server using Gunicorn</b>
+
