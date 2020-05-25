@@ -150,4 +150,4 @@ Overall, a coverage of 99% was attained. Using the 'pytest --cov ./application/ 
 
 ## Project Hindsight <a name="hindsight"></a>
 ### Noteable Accomplishments <a name="accomp"></a>
-<u>Good Implementation of the Feature Branch Model</u>
+<b>Good Implementation of the Feature Branch Model</b>
