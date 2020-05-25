@@ -52,6 +52,9 @@ Due to the size of my risk assessment being too big to turn into a .PNG, the lin
 ### Risk Assessment Revisited <a name="riskrevisit"></a>
 The link for this assessment can be found <a href="https://drive.google.com/open?id=12DV4u67lq7aSlocLogD3vRRZl9lboC5qcYLrbm9IJpY">here</a>. During the project, I revisited my initial risk assessment and added an 'Update' column. This was filled with new considerations and discussed how effective the original solutions were.
 
+Note: Both Risk Assessments are also located within the Documentation folder of this repository.
+
 ## Architecture <a name="archi"></a>
 ### Entity Relationship Diagrams <a name="erd"></a>
-![image](https://drive.google.com/uc?export=view&id=1LSMPA05MJNA_wDj7jzrjeh74ASYHkpay)
+![image](https://drive.google.com/uc?export=view&id=14VIJZAb27fpLH9GmlslE44lvbHYXaOY7)
+
