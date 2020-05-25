@@ -12,6 +12,7 @@ Following the QAC Fundamental Project Specification (DevOps Core) due for 26th M
     + [Risk Assessment Revisited](#riskrevisit)
 4. [Architecture](#archi)
     + [Entity Relationship Diagrams](#erd)
+    + [CI Pipeline](#pipeline)
 
 ## Brief <a name="brief"></a>
 Design a Create Read Update and Delete (CRUD) application utilising tools, methodologies, and technologies that illustrate all core modules covered during training so far.
@@ -67,3 +68,5 @@ Underneath the previously discussed tables is an adminlogin_tb. This table has a
 I later expanded on the previous diagram, adding an orders_tb with a many-to-many relationship with the shoesshops_tb, as a user could have many orders with many shoes from many shops. By proxy, this would demand a customerlogin_tb in order for a user to make orders and log in to see their orders.
 
 After careful consideration, I decided against these additions as I wanted to focus on achieving the Minimum Viable Product (MVP) before attemping to try and add even more tables, which would have perhaps resulted in overwhelming myself. What's more, this section of the project already exceeds the MVP as it contains two relationships rather than one. Yet, this is not to say they will not be added in future.   
+
+### CI Pipeline <a name="pipeline"></a>
