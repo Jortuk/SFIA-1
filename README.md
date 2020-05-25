@@ -115,6 +115,8 @@ Next, the shoes page. Users can come to this page and see what Shoose.com has in
 #### Updating and Deleting Shoes <a name="updateanddelete"></a>
 ![](Documentation/images/update_delete_shoe.PNG)
 
+As mentioned above, this is where a shoe can be updated. Moreover, a shoe can also be deleted
+
 ### Shops Page <a name="shops"></a>
 ![](Documentation/images/shops_page.PNG)
 
