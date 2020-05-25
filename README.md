@@ -15,6 +15,11 @@ Following the QAC Fundamental Project Specification (DevOps Core) due for 26th M
 5. [Deployment](#deployment)
     + [Tools, Technologies and Languages](#ttl)
 6. [Front-end Design](#fdesign)
+    + [Home Page](#home)
+    + [Shoes Page](#shoes)
+    + [Shops Page](#shops)
+        + [Example Shop](#exshop)
+    + [Admin Login Page](#login)
 
 ## Brief <a name="brief"></a>
 Design a Create Read Update and Delete (CRUD) application utilising tools, methodologies, and technologies that illustrate all core modules covered during training so far.
@@ -91,3 +96,14 @@ The following are all the tools, technologies and languages used to create and d
     + <b>Jinja2</b>: Allows for python variables and logic in HTML
 
 ## Front-end Design <a name="fdesign"></a>
+To keep this section concise, rather then showing both the user and admin front-end, only the admin view of the front-end will be shown. Although, keep in mind that the only difference is the user view does not have any of the Create, Update or Delete APIs.
+
+### Home Page <a name="home"></a>
+
+### Shoes Page <a name="shoes"></a>
+
+### Shops Page <a name="shops"></a>
+
+#### Example Shop <a name="exshop"></a>
+
+### Admin Login Page <a name="login"></a>
