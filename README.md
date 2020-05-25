@@ -76,3 +76,15 @@ After careful consideration, I decided against these additions as I wanted to fo
 ### Tools, Technologies and Languages <a name="ttl"></a>
 The following are all the tools, technologies and languages used to create and deploy the app:
 - <b>Trello</b>: Used for project tracking 
+- <b>GitHub</b>: Version Control System, also used in conjunction with Jenkins via Webhook
+- <b>Google Cloud Platform (GCP)</b>: Allows live, virtual environment for the application, also a host for MySQL database
+- <b>MySQL</b>: Enables SQL databases and tables, as well as allowing query functions in Python
+- <b>Jenkins</b>: Continuous Integration (CI) Server - automatically builds application from pushed code on GitHub
+- <b>Unit Testing (PyTest)</b>: Tests one function at a time with optional coverage
+- <b>Gunicorn</b>: <b>NEEDS EDITING</b>
+- <b>Visual Studio Code</b>: IDE used for several languages to achieve front-end and back-end development:
+    + <b>CSS</b>: Styling for front-end design
+    + <b>HTML</b>: Front-end design
+    + <b>Python3</b>: Logic and functionality
+    + <b>Flask</b>: Integrates front-end and back-end
+    + <b>Jinja2</b>: Allows for python variables and logic in HTML
