@@ -67,20 +67,20 @@ Note: Both Risk Assessments are also located within the Documentation folder of 
 
 ## Architecture <a name="archi"></a>
 ### Entity Relationship Diagrams <a name="erd"></a>
-![image](https://drive.google.com/uc?export=view&id=14VIJZAb27fpLH9GmlslE44lvbHYXaOY7)
+![](Documentation/images/ERD_1.PNG)
 
 The core architecture of the application involves two main tables (shoes_tb and shops_tb), both having a relationship with a joining table (shoesshops_tb). All were made in a MySQL database through Flask. The shoesshops_tb links data from the main tables, in this case shoes and shops, to show which shoes can be purchased at which shop.
 
 Underneath the previously discussed tables is an adminlogin_tb. This table has a one-to-one relationship with all other tables due to the fact that there are functions, specifically Create Update and Delete, that require admin level access. This was a decision that required much consideration. In the end, I decided it was a good choice as IMSs are used for companies, not the customer. Yet, the customer/user can still Read about the name, size and price of a desired shoe, and what shop to but it from.
 
-![image](https://drive.google.com/uc?export=view&id=1LSMPA05MJNA_wDj7jzrjeh74ASYHkpay)
+![](Documentation/images/ERD_2.PNG)
 
 I later expanded on the previous diagram, adding an orders_tb with a many-to-many relationship with the shoesshops_tb, as a user could have many orders with many shoes from many shops. By proxy, this would demand a customerlogin_tb in order for a user to make orders and log in to see their orders.
 
 After careful consideration, I decided against these additions as I wanted to focus on achieving the Minimum Viable Product (MVP) before attemping to try and add even more tables, which would have perhaps resulted in overwhelming myself. What's more, this section of the project already exceeds the MVP as it contains two relationships rather than one. Yet, this is not to say they will not be added in future.   
 
 ## Deployment <a name="deployment"></a>
-![image](https://drive.google.com/uc?export=view&id=1jRfyKoUjp3DHN_Ic3bmVSJp2OvYGBxI9p6r5iF8-xU8)
+![](Documentation/images/deployment.PNG)
 
 ### Tools, Technologies and Languages <a name="ttl"></a>
 The following are all the tools, technologies and languages used to create and deploy the app:
@@ -102,6 +102,7 @@ The following are all the tools, technologies and languages used to create and d
 To keep this section concise, rather then showing both the user and admin front-end, only the admin view of the front-end will be shown. Although, keep in mind that the only difference is the user view does not have any of the Create, Update or Delete APIs.
 
 ### Home Page <a name="home"></a>
+![](Documentation/images/.PNG)
 
 ### Shoes Page <a name="shoes"></a>
 
