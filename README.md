@@ -28,8 +28,10 @@ Following the QAC Fundamental Project Specification (DevOps Core) due for 26th M
     + [Noteable Accomplishments](#accomp)
     + [Project Drawbacks](#drawbacks)
     + [Future Improvements](#improvements)
+9. [Author](#author)
+10. [Acknowledgements](#ack)
+11. [License](#license)
     
-
 ## Brief <a name="brief"></a>
 Design a Create Read Update and Delete (CRUD) application utilising tools, methodologies, and technologies that illustrate all core modules covered during training so far.
 
@@ -176,3 +178,11 @@ Although test coverage was 99%, I feel it is important to be able to test your a
 <b>Integration Testing</b>
 
 As mentioned in Project Drawbacks, integration testing would drastically improve this project. To ensure this is carried out in future, I will work on my time management skills and set aside some time dedicated to this, as well as all round testing. 
+
+## Author <a name="author"></a>
+Jordan Taylor
+
+## Acknowledgements <a name="ack"></a>
+The QA Academy trainers for their enjoyable and detailed training sessions, as well as my fellow QA Academy Trainees.
+
+## License <a name="license"></a>
