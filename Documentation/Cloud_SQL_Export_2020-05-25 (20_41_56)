@@ -1,0 +1,228 @@
+-- MySQL dump 10.13  Distrib 5.7.25, for Linux (x86_64)
+--
+-- Host: localhost    Database: mysql
+-- ------------------------------------------------------
+-- Server version	5.7.25-google-log
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Current Database: `flaskappdb`
+--
+
+CREATE DATABASE /*!32312 IF NOT EXISTS*/ `flaskappdb` /*!40100 DEFAULT CHARACTER SET utf8 */;
+
+USE `flaskappdb`;
+
+--
+-- Table structure for table `posts`
+--
+
+DROP TABLE IF EXISTS `posts`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `posts` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(100) NOT NULL,
+  `content` varchar(100) NOT NULL,
+  `date_posted` datetime NOT NULL,
+  `user_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `title` (`title`),
+  UNIQUE KEY `content` (`content`),
+  KEY `user_id` (`user_id`),
+  CONSTRAINT `posts_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `posts`
+--
+
+LOCK TABLES `posts` WRITE;
+/*!40000 ALTER TABLE `posts` DISABLE KEYS */;
+INSERT INTO `posts` VALUES (3,'jord','jord','2020-05-14 11:29:40',3),(4,'felix','felix','2020-05-14 11:30:47',4),(5,'ben','ben','2020-05-15 12:38:41',5);
+/*!40000 ALTER TABLE `posts` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `users`
+--
+
+DROP TABLE IF EXISTS `users`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `first_name` varchar(30) NOT NULL,
+  `last_name` varchar(30) NOT NULL,
+  `email` varchar(500) NOT NULL,
+  `password` varchar(500) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `email` (`email`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `users`
+--
+
+LOCK TABLES `users` WRITE;
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES (3,'Jordan','Taylor','jord@blog.com','$2b$12$2Unao.Lre9.jYQVS4WnD3.a4StpQi/FCK.QAVblq/NliXME3ZlrpS'),(4,'Felix','Houlgate ','felix@blog.com','$2b$12$sjRtyAEcfqKEZB.7wdYRx.dphS/LUehU3frR/nEGuwHcG.lts5OfK'),(5,'Ben','Ryrie','ben@ryrie.com','$2b$12$XXIwwaKRTS8efKo0cyrPOeK7egftRovxq7z.YFaipCxNNlPe1BJ52');
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Current Database: `flaskapptest`
+--
+
+CREATE DATABASE /*!32312 IF NOT EXISTS*/ `flaskapptest` /*!40100 DEFAULT CHARACTER SET utf8 */;
+
+USE `flaskapptest`;
+
+--
+-- Current Database: `shoeims_db`
+--
+
+CREATE DATABASE /*!32312 IF NOT EXISTS*/ `shoeims_db` /*!40100 DEFAULT CHARACTER SET utf8 */;
+
+USE `shoeims_db`;
+
+--
+-- Table structure for table `shoes`
+--
+
+DROP TABLE IF EXISTS `shoes`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `shoes` (
+  `shoe_id` int(11) NOT NULL AUTO_INCREMENT,
+  `shoe_name` varchar(30) NOT NULL,
+  `shoe_size` varchar(2) NOT NULL,
+  `shoe_price` float NOT NULL,
+  PRIMARY KEY (`shoe_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=504 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `shoes`
+--
+
+LOCK TABLES `shoes` WRITE;
+/*!40000 ALTER TABLE `shoes` DISABLE KEYS */;
+INSERT INTO `shoes` VALUES (101,'Air Force 1','S',39.99),(102,'Air Force 1','M',39.99),(103,'Air Force 1','L',39.99),(201,'Air Max 95','S',49.99),(202,'Air Max 95','M',49.99),(203,'Air Max 95','L',49.99),(301,'Flight Origin 4','S',110),(302,'Flight Origin 4','M',110),(303,'Flight Origin 4','L',110),(401,'Golf x OneStar','S',84.99),(402,'Golf x OneStar','M',84.99),(403,'Golf x OneStar','L',84.99),(501,'Adidas Originals SL72','S',70),(502,'Adidas Originals SL72','M',70),(503,'Adidas Originals SL72','L',70);
+/*!40000 ALTER TABLE `shoes` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `shoesShops`
+--
+
+DROP TABLE IF EXISTS `shoesShops`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `shoesShops` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `shoe_id` int(11) NOT NULL,
+  `shop_id` int(11) NOT NULL,
+  `quantity` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `shoe_id` (`shoe_id`),
+  KEY `shop_id` (`shop_id`),
+  CONSTRAINT `shoesShops_ibfk_1` FOREIGN KEY (`shoe_id`) REFERENCES `shoes` (`shoe_id`),
+  CONSTRAINT `shoesShops_ibfk_2` FOREIGN KEY (`shop_id`) REFERENCES `shops` (`shop_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `shoesShops`
+--
+
+LOCK TABLES `shoesShops` WRITE;
+/*!40000 ALTER TABLE `shoesShops` DISABLE KEYS */;
+INSERT INTO `shoesShops` VALUES (1,101,1,8),(2,201,2,6),(3,203,1,11),(4,402,1,6),(5,501,2,9),(6,303,2,12),(7,103,3,8),(8,401,3,7),(9,202,3,3),(10,301,4,6),(11,102,4,0),(12,502,4,16),(13,403,5,3),(14,302,5,13),(15,503,5,5);
+/*!40000 ALTER TABLE `shoesShops` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `shops`
+--
+
+DROP TABLE IF EXISTS `shops`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `shops` (
+  `shop_id` int(11) NOT NULL AUTO_INCREMENT,
+  `shop_address` varchar(100) NOT NULL,
+  `shop_city` varchar(30) NOT NULL,
+  PRIMARY KEY (`shop_id`),
+  UNIQUE KEY `shop_address` (`shop_address`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `shops`
+--
+
+LOCK TABLES `shops` WRITE;
+/*!40000 ALTER TABLE `shops` DISABLE KEYS */;
+INSERT INTO `shops` VALUES (1,'4 Aglet Avenue','York'),(2,'2 Laces Lane','Manchester'),(3,'1 Pair Place','Leeds'),(4,'10 Sole Station','London'),(5,'34 Heel Hill','Poole');
+/*!40000 ALTER TABLE `shops` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `users`
+--
+
+DROP TABLE IF EXISTS `users`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_name` varchar(20) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `password` varchar(200) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `user_name` (`user_name`),
+  UNIQUE KEY `email` (`email`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `users`
+--
+
+LOCK TABLES `users` WRITE;
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES (1,'JTaylor','jord@jord.com','$2b$12$mYgQ0AJqq1mRrQ.4IP6CquTHuiXaZfQ4vEtxS5WVgPcq1/of/DO9.'),(2,'BHesketh','ben@ben.com','$2b$12$ZFjIZq0pRK6SovDeQlaeAeTTVNONZT8c5LUajm9FMVuISrVrMUwjG');
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Current Database: `shoeims_db_test`
+--
+
+CREATE DATABASE /*!32312 IF NOT EXISTS*/ `shoeims_db_test` /*!40100 DEFAULT CHARACTER SET utf8 */;
+
+USE `shoeims_db_test`;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2020-05-25 19:42:21
