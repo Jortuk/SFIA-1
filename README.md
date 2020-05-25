@@ -27,6 +27,8 @@ Following the QAC Fundamental Project Specification (DevOps Core) due for 26th M
 8. [Project Hindsight](#hindsight)
     + [Noteable Accomplishments](#accomp)
     + [Project Drawbacks](#drawbacks)
+    + [Future Improvements](#improvements)
+    
 
 ## Brief <a name="brief"></a>
 Design a Create Read Update and Delete (CRUD) application utilising tools, methodologies, and technologies that illustrate all core modules covered during training so far.
@@ -165,3 +167,12 @@ When Jenkins automatically builds the application, the 'installation.sh' file wi
 <b>Lack of Integration Testing</b>
 
 Even though there was a high percentage of coverage in terms of Unit Testing, there was no Integration Testing. This is a disadvantage as it decreases validity. What's more, there is no way to verify whether the application works in unity. Ultimately, this goes against a TDD approach.
+
+### Future Improvements <a name="improvements"></a>
+<b>Full Testing Coverage</b>
+
+Although test coverage was 99%, I feel it is important to be able to test your application fully. Full coverage would confirm the applications relevance, that it carries out what it aims to do, and it is as effective as it could be.
+
+<b>Integration Testing</b>
+
+As mentioned in Project Drawbacks, integration testing would drastically improve this project. To ensure this is carried out in future, I will work on my time management skills and set aside some time dedicated to this, as well as all round testing. 
