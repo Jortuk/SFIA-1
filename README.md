@@ -105,12 +105,16 @@ To keep this section concise, rather then showing both the user and admin front-
 ![](Documentation/images/home_page.PNG)
 
 ### Shoes Page <a name="shoes"></a>
+![](Documentation/images/shoes_page.PNG)
 
 ### Shops Page <a name="shops"></a>
+![](Documentation/images/shops_page.PNG)
 
 #### Example Shop <a name="exshop"></a>
+![](Documentation/images/example_shop.PNG)
 
 ### Admin Login Page <a name="login"></a>
+![](Documentation/images/login_page.PNG)
 
 ## Testing <a name="testing"></a>
 
