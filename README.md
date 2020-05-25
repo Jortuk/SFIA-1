@@ -17,6 +17,7 @@ Following the QAC Fundamental Project Specification (DevOps Core) due for 26th M
 6. [Front-end Design](#fdesign)
     + [Home Page](#home)
     + [Shoes Page](#shoes)
+        + [Updating and Deleting Shoes](#updateanddelete)
     + [Shops Page](#shops)
         + [Example Shop](#exshop)
     + [Admin Login Page](#login)
@@ -109,7 +110,9 @@ Above is the home and landing page. It welcomes users to the site and offers lin
 ### Shoes Page <a name="shoes"></a>
 ![](Documentation/images/shoes_page.PNG)
 
-Next, the shoes page. Users can come to this page and see what Shoose.com has in its inventory. On the other hand, with admin access there is an 'Add Shoe' API that satisifies the Create functionality of the application. This API works with HTML, CSS, Jinja2, Python and Flask so that a new entry can be added to the MySQL database. This is the case for most APIs in this project. Furthermore, the 'Update Shoe' API, fulfilling the Update functionality, allows the admin to change an already existing entry in the database, in terms of the 'Shoe Name' and 'Shoe Price'. 
+Next, the shoes page. Users can come to this page and see what Shoose.com has in its inventory. On the other hand, with admin access there is an 'Add Shoe' API that satisifies the Create functionality of the application. This API works with HTML, CSS, Jinja2, Python and Flask so that a new entry can be added to the MySQL database. This is the case for most APIs in this project. Furthermore, the 'Update Shoe' API, fulfilling the Update functionality, allows the admin to change an already existing entry in the database, in terms of the 'Shoe Name' and 'Shoe Price'.
+
+### Updating and Deleting Shoes <a name="updateanddelete"></a>
 
 ### Shops Page <a name="shops"></a>
 ![](Documentation/images/shops_page.PNG)
