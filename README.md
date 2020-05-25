@@ -74,3 +74,5 @@ After careful consideration, I decided against these additions as I wanted to fo
 ![image](https://drive.google.com/uc?export=view&id=1jRfyKoUjp3DHN_Ic3bmVSJp2OvYGBxI9p6r5iF8-xU8)
 
 ### Tools, Technologies and Languages <a name="ttl"></a>
+The following are all the tools, technologies and languages used to create and deploy the app:
+- <b>Trello</b>: Used for project tracking 
