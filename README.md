@@ -24,6 +24,7 @@ Following the QAC Fundamental Project Specification (DevOps Core) due for 26th M
 7. [Testing](#testing)
     + [PyTest](#pytest)
     + [PyTest Coverage](#pytestcov)
+8. [Project Hindsight](#hindsight)
 
 ## Brief <a name="brief"></a>
 Design a Create Read Update and Delete (CRUD) application utilising tools, methodologies, and technologies that illustrate all core modules covered during training so far.
@@ -145,3 +146,5 @@ Note: The warning in the image above displays that 'flask.json_available' is dep
 ![](Documentation/images/pytest_coverage.PNG)
 
 Overall, a coverage of 99% was attained. Using the 'pytest --cov ./application/ --cov-report term-missing' command, I was able to determine which lines of code were not covered during testing. After directing to the routes.py file, where the missed lines of code were, I found that the two lines of code were inside the login function. After several attempts of trying to create a function to test this, I was unfortunately unsuccessful. Therefore, this is something to learn for the future.
+
+## Project Hindsight <a name="hindsight"></a>
