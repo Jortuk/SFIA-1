@@ -152,4 +152,6 @@ Overall, a coverage of 99% was attained. Using the 'pytest --cov ./application/ 
 ### Noteable Accomplishments <a name="accomp"></a>
 <b>Good Implementation of the Feature Branch Model</b>
 
-I followed best practices by implementing the Feature Branch model, just as we learned during training. Before being merged onto the 'master' branch, all code was tested, version controlled and deployed using a 'developer branch before finalisation. 
+I followed best practices by implementing the Feature Branch model, just as we learned during training. Before being merged onto the 'master' branch, all code was tested, version controlled and deployed using a 'developer branch before finalisation.
+
+![](Documentation/images/feature_branch.PNG)
