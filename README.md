@@ -141,7 +141,6 @@ On this page, an admin can login with an existing email and password that is wit
 
 ## Testing <a name="testing"></a> 
 ### PyTest <a name="pytest"></a>
-
 Testing was achieved through Unit Testing, using the PyTest tool. This type of testing checks one function at a time through code written in a 'test_back_end.py', in this instance. Firstly, the flask url_for function was used to test whether or not a function did as it was programmed to, and direct to its specified page, returing a HTTP 200 value. All these tests were successful. Secondly, the CRUD functions were tested, taking advantage of the AssertIn() imported from unittest. Once again, these were all successful.
 
 ![](Documentation/images/pytest.PNG)
@@ -186,3 +185,24 @@ Jordan Taylor
 The QA Academy trainers for their enjoyable and detailed training sessions, as well as my fellow QA Academy Trainees.
 
 ## License <a name="license"></a>
+MIT License
+
+Copyright (c) 2020 Jordan Taylor
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
