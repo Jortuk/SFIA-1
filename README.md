@@ -132,8 +132,11 @@ As an example, the first shop is shown above. The shoes at this shop are shown t
 
 On this page, an admin can login with an existing email and password that is within the 'Users' table of the MySQL database. The functionality for the login feature was given to the cohort by QA, therefore is will not count towards the overall mark for the project.
 
-## Testing <a name="testing"></a>
-
+## Testing <a name="testing"></a> 
 ### PyTest <a name="pytest"></a>
+
+Testing was achieved through Unit Testing, using the PyTest tool. This type of testing checks one function at a time through code written in a 'test_back_end.py', in this instance. Firstly, the flask url_for function was used to test whether or not a function did as it was programmed to, and direct to its specified page, returing a HTTP 200 value. All these tests were successful. Secondly, the CRUD functions were tested, taking advantage of the AssertIn() imported from unittest. Once again, these were all successful.
+
+![](Documentation/images/pytest.PNG)
 
 ### PyTest Coverage <a name="pytestcov"></a>
