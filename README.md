@@ -144,4 +144,4 @@ Note: The warning in the image above displays that 'flask.json_available' is dep
 ### PyTest Coverage <a name="pytestcov"></a>
 ![](Documentation/images/pytest_coverage.PNG)
 
-Overall, a coverage of 99% was attained. 
+Overall, a coverage of 99% was attained. Using the 'pytest --cov ./application/ --cov-report term-missing' command, I was able to determine which lines of code were not covered during testing. After directing to the routes.py file, where the missed lines of code were, I found that the two lines of code were inside the login function. After several attempts of trying to create a function to test this, I was unfortunately unsuccessful. Therefore, this is something to learn for the future.
