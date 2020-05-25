@@ -102,6 +102,7 @@ The following are all the tools, technologies and languages used to create and d
 To keep this section concise, rather then showing both the user and admin front-end, only the admin view of the front-end will be shown. Although, keep in mind that the only difference is the user view does not have any of the Create, Update or Delete APIs.
 
 ### Home Page <a name="home"></a>
+![](Documentation/images/.PNG)
 
 ### Shoes Page <a name="shoes"></a>
 
