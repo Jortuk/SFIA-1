@@ -43,17 +43,17 @@ My project aims to function as an Inventory Management System (IMS) for footwear
 To track my project progression, I used a kanban Trello Board. This helped me to have an overview of different stages of the project. Although this wan an individual project, Agile methodology was carried out where possible, regarding the product and sprint (tasks) backlog. The product backlog contained User Stories that the CRUD application had to fulfill, then the tasks broke this down into smaller objectives that had to be completed to meet the end-goal.
 
 ### Initial Board <a name="initialboard"></a>
-![image](https://drive.google.com/uc?export=view&id=1d6d1a2NCrQNdpFe7tiJo4Iyu_kyZTFBB)
+![](Documentation/images/initial_trello_board.PNG)
 
 The above image displays my Trello Board prior to any project progression. As you can see, only the 'Product Backlog' and 'Tasks' columns are populated. The board also included an 'In Progress' column to show what was being worked on but not yet completed, a 'Tested?' column to illustrate what had been tested, for example the CRUD application itself, a 'Done' column to indicate what was finished, and finally a 'Bugs/Issues' column in case there were any problems while attempting to complete a task.
 
 ### On-going Changes <a name="changes"></a>
-![image](https://drive.google.com/uc?export=view&id=1__VUMEC28VAjuXz1Q5r4F49viOVwbWrq)
+![](Documentation/images/updated_trello_board.PNG)
 
 As project development went on, I made some modifications to the Trello Board. First, the MoSCoW (Must have, Should have, Could have, Would have) method was implemented to prioritise which tasks were the most important to complete, from most to least important. Note, names such as 'Could Haves' and 'Would Haves' did not mean they might have not made it into the project, they were only for prioritisation purposes. Second, tasks that had been completed were moved to the 'Done' column, as shown above. Lastly, a bug was encountered when creating a MySQL foreign key. However, this issue was resolved and labelled as 'FIXED'.
 
 ### Final Board <a name="finalboard"></a>
-![image](https://drive.google.com/uc?export=view&id=1js5eU76mnwDvg3Z7SRNWD73M6Ly9UruS)
+![](Documentation/images/final_trello_board.PNG)
 
 By the project due date (26th May), all of the User Stories had been met, and issues were fixed and near to none. However, integration testing using Selenium had not been completed. Unfortunately, this was a result of the testing not being fully conducted because of time restrictions toward the end of the project.
 
