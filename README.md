@@ -162,3 +162,6 @@ I followed best practices by implementing the Feature Branch model, just as we l
 When Jenkins automatically builds the application, the 'installation.sh' file within the repository runs a command to deploy the application on a production server using Gunicron, rather than a development server. This makes the deployment more stable, faster, and able to handle more requests at once.
 
 ### Project Drawbacks <a name="drawbacks"></a>
+<b>Lack of Integration Testing</b>
+
+Even though there was a high percentage of coverage in terms of Unit Testing, there was no Integration Testing. This is a disadvantage as it decreases validity. What's more, there is no way to verify whether the application works in unity. Ultimately, this goes against a TDD approach.
