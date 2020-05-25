@@ -26,6 +26,7 @@ Following the QAC Fundamental Project Specification (DevOps Core) due for 26th M
     + [PyTest Coverage](#pytestcov)
 8. [Project Hindsight](#hindsight)
     + [Noteable Accomplishments](#accomp)
+    + [Project Drawbacks](#drawbacks)
 
 ## Brief <a name="brief"></a>
 Design a Create Read Update and Delete (CRUD) application utilising tools, methodologies, and technologies that illustrate all core modules covered during training so far.
@@ -158,3 +159,6 @@ I followed best practices by implementing the Feature Branch model, just as we l
 
 <b>Application Deployed onto a Production WSGI Server using Gunicorn</b>
 
+When Jenkins automatically builds the application, the 'installation.sh' file within the repository runs a command to deploy the application on a production server using Gunicron, rather than a development server. This makes the deployment more stable, faster, and able to handle more requests at once.
+
+### Project Drawbacks <a name="drawbacks"></a>
