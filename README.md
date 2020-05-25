@@ -70,3 +70,4 @@ I later expanded on the previous diagram, adding an orders_tb with a many-to-man
 After careful consideration, I decided against these additions as I wanted to focus on achieving the Minimum Viable Product (MVP) before attemping to try and add even more tables, which would have perhaps resulted in overwhelming myself. What's more, this section of the project already exceeds the MVP as it contains two relationships rather than one. Yet, this is not to say they will not be added in future.   
 
 ### Deployment <a name="deployment"></a>
+![image](https://drive.google.com/uc?export=view&id=1jRfyKoUjp3DHN_Ic3bmVSJp2OvYGBxI9p6r5iF8-xU8)
