@@ -33,22 +33,22 @@ Following the QAC Fundamental Project Specification (DevOps Core) due for 26th M
 11. [License](#license)
     
 ## Brief <a name="brief"></a>
-Design a Create Read Update and Delete (CRUD) application utilising tools, methodologies, and technologies that illustrate all core modules covered during training so far.
+Design a Create, Read, Update and Delete (CRUD) application utilising tools, methodologies, and technologies that illustrate all core modules covered during training so far.
 
 The requirements are, however not limited too:
 - Trello Board (or Kanban equivalent).
 - A relational MySQL database created on Google Cloud Platform (GCP) - displayed with an Entity Relationship Diagram (ERD).
 - Clear documentation including architecture design, risk assessment, and so on.
-- The CRUD application itself, coded in Python, that meets the User Stories on the Trello Board
+- The CRUD application itself, coded in Python, that meets the User Stories on the Trello Board.
 - Testing the application for validation using Pytest - consistent reports and evidence must be provided to prove a Test Driven Development (TDD) approach.
 - A fully functioning front-end website with integrated APIs, using Flask.
 - Code incorporated into a Version Control Machine (VCS), implementing the Feature-Branch model which will then be built through a Continuous Integration (CI) server i.e. Jenkins, before finally being deployed to a cloud-based Virtual Machine (VM).
 
 ### Project Proposal <a name="projectproposal"></a>
-My project aims to function as an Inventory Management System (IMS) for footwear products, for a hypothetical website - 'Shoose.com'. As an admin, shoes can be added and linked to pre-existing shops within the MySQL database. Both are joined together on a joining table, showcasing two many-to-many relationships. The IMS will be automatically built using Jenkins and GitHub Webhooks.
+My project aims to function as an Inventory Management System (IMS) for footwear products, for a hypothetical website - 'Shoose.com'. As an admin, shoes can be added and linked to pre-existing shops within the MySQL database. Both are joined together on a joining table, showcasing two many-to-many relationships. The IMS will be automatically built using Jenkins and GitHub Webhooks, then deployed on a WSGI production server using Gunicorn.
 
 ## Trello Board <a name="trelloboard"></a>
-To track my project progression, I used a kanban Trello Board. This helped me to have an overview of different stages of the project. Although this wan an individual project, Agile methodology was carried out where possible, regarding the product and sprint (tasks) backlog. The product backlog contained User Stories that the CRUD application had to fulfill, then the tasks broke this down into smaller objectives that had to be completed to meet the end-goal.
+To track my project progression, I used a kanban Trello Board. This helped me to have an overview of the different stages of the project. Although this was an individual project, Agile methodology was carried out where possible, regarding the product and sprint (tasks) backlog. The product backlog contained User Stories that the CRUD application had to fulfill, then the tasks broke this down into smaller objectives that had to be completed to meet the end-goal.
 
 ### Initial Board <a name="initialboard"></a>
 ![](Documentation/images/initial_trello_board.PNG)
@@ -58,12 +58,12 @@ The above image displays my Trello Board prior to any project progression. As yo
 ### On-going Changes <a name="changes"></a>
 ![](Documentation/images/updated_trello_board.PNG)
 
-As project development went on, I made some modifications to the Trello Board. First, the MoSCoW (Must have, Should have, Could have, Would have) method was implemented to prioritise which tasks were the most important to complete, from most to least important. Note, names such as 'Could Haves' and 'Would Haves' did not mean they might have not made it into the project, they were only for prioritisation purposes. Second, tasks that had been completed were moved to the 'Done' column, as shown above. Lastly, a bug was encountered when creating a MySQL foreign key. However, this issue was resolved and labelled as 'FIXED'.
+As project development went on, I made some modifications to the Trello Board. First, the MoSCoW (Must have, Should have, Could have, Would have) method was implemented to prioritise which tasks were the most important to complete, from most to least important. Note, names such as 'Could Haves' and 'Would Haves' did not mean they might not have made it into the project, they were for prioritisation purposes only. Second, tasks that had been completed were moved to the 'Done' column, as shown above. Lastly, a bug was encountered when creating a MySQL foreign key. However, this issue was resolved and labelled as 'FIXED'.
 
 ### Final Board <a name="finalboard"></a>
 ![](Documentation/images/final_trello_board.PNG)
 
-By the project due date (26th May), all of the User Stories had been met, and issues were fixed and near to none. However, integration testing using Selenium had not been completed. Unfortunately, this was a result of the testing not being fully conducted because of time restrictions toward the end of the project.
+By the project due date (26th May), all of the User Stories had been met, and issues were fixed. However, integration testing using Selenium had not been completed. Unfortunately, this was a result of the testing not being fully conducted because of time restrictions toward the end of the project.
 
 ## Risk Assessment <a name="risk"></a>
 Due to the size of my risk assessment being too big to turn into a .PNG, the link for it can be found <a href="https://drive.google.com/open?id=1P-GaIPDCMVp0goVafJUdVP-oQIsWDpqf">here</a>. The 'Likelihood' and 'Impact' columns are rated on a scale of 1 (low) to 5 (high). The assessment encompasses the following types of risks: Time Management, Computer-related Injuries, Security and Other.
@@ -79,7 +79,7 @@ Note: Both Risk Assessments are also located within the Documentation folder of 
 
 The core architecture of the application involves two main tables (shoes_tb and shops_tb), both having a relationship with a joining table (shoesshops_tb). All were made in a MySQL database through Flask. The shoesshops_tb links data from the main tables, in this case shoes and shops, to show which shoes can be purchased at which shop.
 
-Underneath the previously discussed tables is an adminlogin_tb. This table has a one-to-one relationship with all other tables due to the fact that there are functions, specifically Create Update and Delete, that require admin level access. This was a decision that required much consideration. In the end, I decided it was a good choice as IMSs are used for companies, not the customer. Yet, the customer/user can still Read about the name, size and price of a desired shoe, and what shop to but it from.
+Underneath the previously discussed tables is an adminlogin_tb. This table has a one-to-one relationship with all other tables due to the fact that there are functions, specifically Create, Update and Delete, that require admin level access. This was a decision that required much consideration. In the end, I decided it was a good choice as IMSs are used for companies, not the customer. Yet, the customer/user can still Read about the name, size and price of a desired shoe, and what shop to but it from.
 
 ![](Documentation/images/ERD_2.PNG)
 
@@ -94,11 +94,11 @@ After careful consideration, I decided against these additions as I wanted to fo
 The following are all the tools, technologies and languages used to create and deploy the app:
 - <b>Trello</b>: Used for project tracking 
 - <b>GitHub</b>: Version Control System, also used in conjunction with Jenkins via Webhook
-- <b>Google Cloud Platform (GCP)</b>: Allows live, virtual environment for the application, also a host for MySQL database
+- <b>Google Cloud Platform (GCP)</b>: Allows a live, virtual environment for the application, also a host for MySQL database
 - <b>MySQL</b>: Enables SQL databases and tables, as well as allowing query functions in Python
-- <b>Jenkins</b>: Continuous Integration (CI) Server - automatically builds application from pushed code on GitHub
+- <b>Jenkins</b>: Continuous Integration (CI) Server - automatically builds the application from pushed code on GitHub
 - <b>Unit Testing (PyTest)</b>: Tests one function at a time with optional coverage
-- <b>Gunicorn</b>: <b>NEEDS EDITING</b>
+- <b>Gunicorn</b>: Deploys application on a Production WSGI server
 - <b>Visual Studio Code</b>: IDE used for several languages to achieve front-end and back-end development:
     + <b>CSS</b>: Styling for front-end design
     + <b>HTML</b>: Front-end design
@@ -122,7 +122,7 @@ Next, the shoes page. Users can come to this page and see what Shoose.com has in
 #### Updating and Deleting Shoes <a name="updateanddelete"></a>
 ![](Documentation/images/update_delete_shoe.PNG)
 
-As mentioned above, this is where a shoe can be updated. Moreover, a shoe can also be deleted when the 'Delete Shoe' button is pressed. When pressed, the runs a function that removes the selected shoe entry from the database. Thus, supporting the Delete functionality of the application.
+As mentioned above, this is where a shoe can be updated. Moreover, a shoe can also be deleted when the 'Delete Shoe' button is pressed. When pressed, the button runs a function that removes the selected shoe entry from the database. Thus, supporting the Delete functionality of the application.
 
 ### Shops Page <a name="shops"></a>
 ![](Documentation/images/shops_page.PNG)
@@ -132,12 +132,12 @@ Here, the shops available are listed. These links redirect the user to a selecte
 #### Example Shop <a name="exshop"></a>
 ![](Documentation/images/example_shop.PNG)
 
-As an example, the first shop is shown above. The shoes at this shop are shown through the joining table, shoesshops_tb, discussed earlier. It uses the shoe IDs to determine which shoes are displayed, as long as the shop ID is equal to 1. This is also the case for the following shops, where the shop ID will be 2, and so on. In addition, the admin can update the quantity of a shoe to fulfill the applications role as an IMS, and further adhere to the Update functionality. 
+As an example, the first shop is shown above. The shoes at this shop are shown through the joining table, shoesshops_tb, discussed earlier. It uses the shoe IDs to determine which shoes are displayed, as long as the shop ID is equal to 1. This is also the case for the following shops, where the shop ID will be 2, and so on. In addition, the admin can update the quantity of a shoe to fulfill the application's role as an IMS, and further adhere to the Update functionality. 
 
 ### Admin Login Page <a name="login"></a>
 ![](Documentation/images/login_page.PNG)
 
-On this page, an admin can login with an existing email and password that is within the 'Users' table of the MySQL database. The functionality for the login feature was given to the cohort by QA, therefore is will not count towards the overall mark for the project.
+On this page, an admin can login with an existing email and password that is within the 'Users' table of the MySQL database. The functionality for the login feature was given to the cohort by QA, therefore it will not count towards the overall mark for the project.
 
 ## Testing <a name="testing"></a> 
 ### PyTest <a name="pytest"></a>
@@ -156,7 +156,7 @@ Overall, a coverage of 99% was attained. Using the 'pytest --cov ./application/ 
 ### Noteable Accomplishments <a name="accomp"></a>
 <b>Good Implementation of the Feature Branch Model</b>
 
-I followed best practices by implementing the Feature Branch model, just as we learned during training. Before being merged onto the 'master' branch, all code was tested, version controlled and deployed using a 'developer branch before finalisation.
+I followed best practices by implementing the Feature Branch model, just as we learned during training. Before being merged onto the 'master' branch, all code was tested, version controlled and deployed using a 'developer' branch, before finalisation.
 
 ![](Documentation/images/branch_merge.PNG)
 
@@ -172,11 +172,14 @@ Even though there was a high percentage of coverage in terms of Unit Testing, th
 ### Future Improvements <a name="improvements"></a>
 <b>Full Testing Coverage</b>
 
-Although test coverage was 99%, I feel it is important to be able to test your application fully. Full coverage would confirm the applications relevance, that it carries out what it aims to do, and it is as effective as it could be.
+Although test coverage was 99%, I feel it is important to be able to test your application fully. Full coverage would confirm the application's relevance, that it carries out what it aims to do, and it is as effective as it could be.
 
 <b>Integration Testing</b>
 
-As mentioned in Project Drawbacks, integration testing would drastically improve this project. To ensure this is carried out in future, I will work on my time management skills and set aside some time dedicated to this, as well as all round testing. 
+As mentioned in Project Drawbacks, integration testing would drastically improve this project. To ensure this is carried out in future, I will work on my time management skills and set aside some time dedicated to this, as well as all round testing.
+
+<b>Adding more Tables and Relationships</b>
+During the ERD section of this document, I suggested a more complex core architecture could be put into practice. Incorporating an orders table and feature, along with a customer login, would add value to the application, making it richer with content.
 
 ## Author <a name="author"></a>
 Jordan Taylor
