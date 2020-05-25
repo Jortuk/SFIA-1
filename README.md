@@ -139,4 +139,9 @@ Testing was achieved through Unit Testing, using the PyTest tool. This type of t
 
 ![](Documentation/images/pytest.PNG)
 
+Note: The warning in the image above displays that 'flask.json_available' is deprecated. This in not an error in testing. 
+
 ### PyTest Coverage <a name="pytestcov"></a>
+![](Documentation/images/pytest_coverage.PNG)
+
+Overall, a coverage of 99% was attained. 
