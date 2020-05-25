@@ -14,6 +14,7 @@ Following the QAC Fundamental Project Specification (DevOps Core) due for 26th M
     + [Entity Relationship Diagrams](#erd)
 5. [Deployment](#deployment)
     + [Tools, Technologies and Languages](#ttl)
+6. [Front-end Design](#fdesign)
 
 ## Brief <a name="brief"></a>
 Design a Create Read Update and Delete (CRUD) application utilising tools, methodologies, and technologies that illustrate all core modules covered during training so far.
@@ -88,3 +89,5 @@ The following are all the tools, technologies and languages used to create and d
     + <b>Python3</b>: Logic and functionality
     + <b>Flask</b>: Integrates front-end and back-end
     + <b>Jinja2</b>: Allows for python variables and logic in HTML
+
+## Front-end Design <a name="fdesign"></a>
