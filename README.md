@@ -115,7 +115,7 @@ Next, the shoes page. Users can come to this page and see what Shoose.com has in
 #### Updating and Deleting Shoes <a name="updateanddelete"></a>
 ![](Documentation/images/update_delete_shoe.PNG)
 
-As mentioned above, this is where a shoe can be updated. Moreover, a shoe can also be deleted
+As mentioned above, this is where a shoe can be updated. Moreover, a shoe can also be deleted when the 'Delete Shoe' button is pressed. When pressed, the runs a function that removes the selected shoe entry from the database. Thus, supporting the Delete functionality of the application.
 
 ### Shops Page <a name="shops"></a>
 ![](Documentation/images/shops_page.PNG)
