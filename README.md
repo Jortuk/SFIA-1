@@ -58,3 +58,9 @@ Note: Both Risk Assessments are also located within the Documentation folder of 
 ### Entity Relationship Diagrams <a name="erd"></a>
 ![image](https://drive.google.com/uc?export=view&id=14VIJZAb27fpLH9GmlslE44lvbHYXaOY7)
 
+The core architecture of the application involves two main tables (shoes_tb and shops_tb), both having a relationship with a joining table (shoesshops_tb). All were made in a MySQL database through Flask. The shoesshops_tb links data from the main tables, in this case shoes and shops, to show which shoes can be purchased at which shop.
+
+Underneath the previously discussed tables is an adminlogin_tb. This table has a one-to-one relationship with all other tables due to the fact that there are functions, specifically Create Update and Delete, that require admin level access. This was a decision that required much consideration. In the end, I decided it was a good choice as IMSs are used for companies, not the customer. Yet, the customer/user can still Read about the name, size and price of a desired shoe, and what shop to but it from.
+
+![image](https://drive.google.com/uc?export=view&id=1LSMPA05MJNA_wDj7jzrjeh74ASYHkpay)
+
