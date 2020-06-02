@@ -1,0 +1,32 @@
+version: '3.7'
+services:
+  flaskapp:
+    image: jortuk/flaskproject
+    build: ./flaskapp
+    ports:
+    - target: 5000
+      published: 5000
+      protocol: tcp
+  nginx:
+    image: nginx:latest
+    ports:
+    - target: 80
+      published: 80
+      protocol: tcp
+    volumes:
+    - type: bind
+      source: ./nginx/nginx.conf
+      target: /etc/nginx/nginx.conf
+  database:
+    image: mysql
+    build: ./db
+    ports:
+    - target: 3306
+      published: 3306
+      protocol: tcp
+    volumes:
+    - type: volume
+      source: mysqlvolume
+      target: /var/lib/mysql
+volumes:
+  mysqlvolume:
