@@ -1,12 +1,14 @@
 version: '3.7'
 services:
   flaskapp:
-    image: jortuk/flaskproject
-    build: ./flaskapp
+    build: ./
     ports:
     - target: 5000
       published: 5000
       protocol: tcp
+    environment:
+      SFIA1_DB_URI: ${SFIA1_DB_URI}
+      SECRET_KEY: ${SECRET_KEY}
   nginx:
     image: nginx:latest
     ports:
@@ -18,8 +20,7 @@ services:
       source: ./nginx/nginx.conf
       target: /etc/nginx/nginx.conf
   database:
-    image: mysql
-    build: ./db
+    image: mysql:5.7
     ports:
     - target: 3306
       published: 3306
@@ -28,5 +29,8 @@ services:
     - type: volume
       source: mysqlvolume
       target: /var/lib/mysql
+    environment:
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
 volumes:
   mysqlvolume:
