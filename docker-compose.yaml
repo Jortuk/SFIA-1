@@ -9,6 +9,8 @@ services:
     environment:
       SFIA1_DB_URI: ${SFIA1_DB_URI}
       SECRET_KEY: ${SECRET_KEY}
+    depends_on:
+    - database
   nginx:
     image: nginx:latest
     ports:
