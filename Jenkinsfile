@@ -8,7 +8,7 @@ pipeline{
         }
         stage("Run Docker-Compose"){
             steps{
-                sh './scripts/docker.sh'
+                sh './script/docker.sh'
             }
         }
         
