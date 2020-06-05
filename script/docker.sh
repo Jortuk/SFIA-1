@@ -1,4 +1,4 @@
 #!/bin/bash
 
-source .bashrc
+source .profile
 sudo docker-compose up -d
